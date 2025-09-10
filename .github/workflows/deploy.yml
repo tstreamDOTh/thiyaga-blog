@@ -3,7 +3,7 @@ name: Deploy Hugo site to Pages
 on:
   push:
     branches:
-      - main  # trigger on pushes to main
+      - master  # trigger on pushes to main
 
 jobs:
   deploy:

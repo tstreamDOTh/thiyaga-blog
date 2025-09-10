@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Software Development on Blog by Thiyagaraj T</title>
+    <link>//localhost:1313/tags/software-development/</link>
+    <description>Recent content in Software Development on Blog by Thiyagaraj T</description>
+    <image>
+      <title>Blog by Thiyagaraj T</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.150.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 10 Sep 2025 10:30:00 +0530</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The 90/10 Rule: The Inconvenient Truth About Agentic AI — It&#39;s All Plumbing, No Brain</title>
+      <link>//localhost:1313/posts/the-9010-rule-agentic-ai/</link>
+      <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
+      <guid>//localhost:1313/posts/the-9010-rule-agentic-ai/</guid>
+      <description>The real challenge in building AI agents isn&amp;#39;t the AI — it&amp;#39;s everything else. 90% of the work is software engineering, and only 10% is actually about the AI model itself.</description>
+    </item>
+  </channel>
+</rss>

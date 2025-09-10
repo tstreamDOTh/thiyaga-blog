@@ -109,9 +109,7 @@ In the past year, ElevenLabs went from primarily text-to-speech to launching rea
 
 ## The Bottom Line
 
-The uncomfortable truth is that companies building successful agentic AI are software companies first, AI companies second. While some chase benchmark scores and build impressive demos, the winners focus on reliability, user experience, and seamless integration. 
-
-The future belongs to those who master the plumbing, not just the brain.
+The uncomfortable truth is that companies building successful agentic AI are software companies first, AI companies second. While some chase benchmark scores and build impressive demos, the winners focus on reliability, user experience, and seamless integration. The future belongs to those who master the plumbing, not just the brain.
 
 ---
 

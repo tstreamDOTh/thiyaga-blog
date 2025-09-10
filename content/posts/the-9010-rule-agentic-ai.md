@@ -113,7 +113,7 @@ The uncomfortable truth is that companies building successful agentic AI are sof
 
 ---
 
-*Want to dive deeper into building production-ready AI systems? I will be sharing a detailed series on Voice Agents in the upcoming weeks.*
+*Want to dive deeper into building production-ready AI systems? I will be sharing a detailed series on Voice Agents in the upcoming weeks. *
 
 ---
 

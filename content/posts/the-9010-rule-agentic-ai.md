@@ -21,7 +21,7 @@ This isn’t just a hot take - it’s a hard-learned lesson from intense 11 mont
 
 Before diving deeper, let’s clarify what we mean when we throw around terms like "agents," "agentic workflows," and "agentic AI" - because the industry loves to use these interchangeably when they’re actually quite different.
 
-### AI Agents
+### AI Agents 
 
 Autonomous systems that can perceive their environment, make decisions, and take actions to achieve goals.
 

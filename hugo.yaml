@@ -17,15 +17,7 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Thiyagaraj T
   description: "Building Agentic AI that solves real problems at Eightfold AI. Sharing insights on AI engineering, software development, and the reality of building production AI systems."
-  keywords:
-    [
-      AI,
-      Agentic AI,
-      Software Engineering,
-      Machine Learning,
-      Voice AI,
-      Eightfold AI,
-    ]
+  keywords: ["AI", "Agentic AI", "Software Engineering", "Machine Learning", "Voice AI", "Eightfold AI"]
   author: Thiyagaraj T
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]

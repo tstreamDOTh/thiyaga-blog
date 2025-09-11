@@ -9,7 +9,7 @@ showToc: true
 TocOpen: false
 ---
 
-## The Real Challenge in Building AI Agents Isn’t the AI - It’s Everything Else
+### The Real Challenge in Building AI Agents Isn't the AI - It's Everything Else
 
 The AI industry has a marketing problem. We’ve become so infatuated with the "intelligence" in artificial intelligence that we’ve forgotten the most important truth about building agentic AI systems: 
 
@@ -17,25 +17,25 @@ The AI industry has a marketing problem. We’ve become so infatuated with the "
 
 This isn’t just a hot take - it’s a hard-learned lesson from intense 11 months of building AI interview and agentic systems at Eightfold AI, where this realisation became both the problem statement and a career pivot. While everyone’s debating which foundation model has the highest benchmark scores, the real battles are being fought in error handling, state management, and API integrations.
 
-## What Are We Actually Talking About? A Human-Friendly Guide
+### What Are We Actually Talking About? A Human-Friendly Guide
 
 Before diving deeper, let’s clarify what we mean when we throw around terms like "agents," "agentic workflows," and "agentic AI" - because the industry loves to use these interchangeably when they’re actually quite different.
 
-### AI Agents
+#### AI Agents
 
 Autonomous systems that can perceive their environment, make decisions, and take actions to achieve goals.
 
-### Agentic Workflow
+#### Agentic Workflow
 
 Structured processes where AI systems can make decisions and take actions at various steps, but within predefined guardrails. Imagine a smart assembly line where each station can adapt based on what it receives.
 
-### Agentic AI
+#### Agentic AI
 
 The broader category encompassing both - any AI system that exhibits agency, whether it’s making simple decisions in a workflow or operating as a fully autonomous agent.
 
 **The key distinction?** Autonomy and scope. A workflow might let AI decide which email template to use, while a full agent might decide whether to send the email at all, whom to send it to, and what follow-up actions to take.
 
-## The Inconvenient Truth: It’s All About the Plumbing
+### The Inconvenient Truth: It's All About the Plumbing
 
 Here’s what no one wants to admit: building production-ready agentic AI feels less like training neural networks and more like being a really sophisticated plumber. You’re not crafting algorithms - you’re connecting pipes, managing flow, handling scale, and making sure nothing leaks when the system is under load. The problem gets further complex when you are building realtime AI systems.
 
@@ -48,21 +48,21 @@ Consider what happens when you build even a simple AI agent that can book meetin
 
 The AI model itself - the part that actually understands language and generates responses - is often the easiest part to implement. It’s everything else that takes months to get right.
 
-## Where the Real Moats Are Built - The 90%
+### Where the Real Moats Are Built - The 90%
 
 While everyone’s focused on model performance, the real competitive advantages in agentic AI are being built in the boring stuff. Here’s where the actual moats lie:
 
-### Context Management
+#### Context Management
 
 Most AI models have context windows, but real conversations don’t fit neatly into these limits. Building systems that can maintain relevant context across extended interactions, summarize previous conversations intelligently, and surface the right information at the right time - that’s pure software engineering.
 
 The best agentic systems don’t just remember everything; they remember the right things. This requires sophisticated context compression, relevance scoring, and retrieval systems that would make a search engineer proud.
 
-### Memory Systems
+#### Memory Systems
 
 Human memory isn’t just storage - it’s reconstruction, association, and forgetting. Building AI agents that can form lasting memories, make connections across time, and even strategically forget irrelevant information requires complex data architecture, caching strategies, and information architecture.
 
-### Workflow Integration
+#### Workflow Integration
 
 Real agents don’t live in isolation - they need to work within existing business processes, connect to enterprise systems, and hand off seamlessly to humans when needed. This means building robust integration layers that can handle:
 
@@ -71,7 +71,7 @@ Real agents don’t live in isolation - they need to work within existing busine
 * **Business rule enforcement**: Ensuring the agent operates within company policies and compliance requirements
 * **Handoff protocols**: Smoothly transferring control between AI and human operators
 
-### Safeguards and Reliability
+#### Safeguards and Reliability
 
 The more autonomous your AI agent, the more ways it can fail catastrophically. Building production-ready agents means implementing multiple layers of safety:
 
@@ -81,7 +81,7 @@ The more autonomous your AI agent, the more ways it can fail catastrophically. B
 * **Monitoring and alerting**: Detecting when the agent is behaving unexpectedly
 * **Circuit breakers**: Automatically stopping the agent when error rates spike - Gracefully handle the user experience when there are upstream service issues
 
-### User Experience Design
+#### User Experience Design
 
 Users don’t care about your model’s perplexity scores - they care about whether the agent feels helpful, trustworthy, and predictable. Great agent UX requires:
 
@@ -89,7 +89,7 @@ Users don’t care about your model’s perplexity scores - they care about whet
 * **Graceful degradation**: When things go wrong, fail in a way that maintains user trust
 * **Feedback loops**: Allow users to correct the agent and learn from these corrections
 
-### Distribution and Deployment
+#### Distribution and Deployment
 
 The best agent in the world is useless if users can’t access it where and when they need it. This means building distribution systems that can:
 
@@ -97,7 +97,7 @@ The best agent in the world is useless if users can’t access it where and when
 * **Scalable infrastructure**: Handle varying loads without degradation
 * **Analytics and instrumentation**: Understand how agents are actually being used
 
-## The 10% That Actually Matters: Foundation Models and Rapid Evolution
+### The 10% That Actually Matters: Foundation Models and Rapid Evolution
 
 So what about that 10% that’s actually AI? The foundation model landscape evolves so rapidly that adaptability trumps picking today’s "best" model.
 
@@ -107,7 +107,7 @@ In the past year, ElevenLabs went from primarily text-to-speech to launching rea
 
 **The smartest teams build model-agnostic systems** that can adapt as new options emerge, because today’s state-of-the-art becomes tomorrow’s baseline.
 
-## The Bottom Line
+### The Bottom Line
 
 The uncomfortable truth is that companies building successful agentic AI are software companies first, AI companies second. While some chase benchmark scores and build impressive demos, the winners focus on reliability, user experience, and seamless integration. The future belongs to those who master the plumbing, not just the brain.
 

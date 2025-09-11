@@ -25,7 +25,7 @@ Before diving deeper, let’s clarify what we mean when we throw around terms li
 
 Autonomous systems that can perceive their environment, make decisions, and take actions to achieve goals.
 
-### Agentic Workflows
+### Agentic Workflow
 
 Structured processes where AI systems can make decisions and take actions at various steps, but within predefined guardrails. Imagine a smart assembly line where each station can adapt based on what it receives.
 

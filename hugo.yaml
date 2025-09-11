@@ -76,7 +76,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi, I’m thiyaga 👋 — From Pixels to Agents"
-    Content: "Engineer. Builder. Dreamer. I’ve gone from crafting consumer products, design systems, and web editors to now shaping agentic AI at Eightfold AI."
+    Content: "Engineer. Builder. Dreamer. I’ve gone from crafting consumer products, design systems, and web based design editors at Pixels to now shaping agentic AI at Eightfold AI."
 
   socialIcons:
     - name: github

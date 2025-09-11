@@ -44,7 +44,7 @@ Consider what happens when you build even a simple AI agent that can book meetin
 * **Error handling**: What happens when the calendar API is down? When the AI misunderstands the request? When there are conflicting time zones?
 * **State management**: How do you track the conversation context across multiple interactions? What if the user gets disconnected, how does the agent is aware of what the user is seeing?
 * **Integration management**: How do you handle rate limits across different APIs? Authentication? Data format mismatches?
-* **User experience**: How do you provide feedback when the agent is thinking? How do you handle failures gracefully?
+* **User experience**: How do you provide feedback when the agent is thinking? How do you handle failures gracefully ?
 
 The AI model itself - the part that actually understands language and generates responses - is often the easiest part to implement. It’s everything else that takes months to get right.
 

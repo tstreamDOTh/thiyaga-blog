@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Blog by Thiyagaraj T</title>
-    <link>https://thiyaga.xyz/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Blog by Thiyagaraj T</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 10 Sep 2025 10:30:00 +0530</lastBuildDate>
-    <atom:link href="https://thiyaga.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Agentic AI</title>
-      <link>https://thiyaga.xyz/tags/agentic-ai/</link>
+      <link>/tags/agentic-ai/</link>
       <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/tags/agentic-ai/</guid>
+      <guid>/tags/agentic-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>AI</title>
-      <link>https://thiyaga.xyz/tags/ai/</link>
+      <link>/tags/ai/</link>
       <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/tags/ai/</guid>
+      <guid>/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Engineering</title>
-      <link>https://thiyaga.xyz/tags/engineering/</link>
+      <link>/tags/engineering/</link>
       <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/tags/engineering/</guid>
+      <guid>/tags/engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Machine Learning</title>
-      <link>https://thiyaga.xyz/tags/machine-learning/</link>
+      <link>/tags/machine-learning/</link>
       <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/tags/machine-learning/</guid>
+      <guid>/tags/machine-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Software Development</title>
-      <link>https://thiyaga.xyz/tags/software-development/</link>
+      <link>/tags/software-development/</link>
       <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/tags/software-development/</guid>
+      <guid>/tags/software-development/</guid>
       <description></description>
     </item>
   </channel>

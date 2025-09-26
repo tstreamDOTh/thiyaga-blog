@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Blog by Thiyagaraj T</title>
-    <link>https://thiyaga.xyz/categories/</link>
+    <link>https://tstreamdoth.github.io/thiyaga-blog/categories/</link>
     <description>Recent content in Categories on Blog by Thiyagaraj T</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 10 Sep 2025 10:30:00 +0530</lastBuildDate>
-    <atom:link href="https://thiyaga.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tstreamdoth.github.io/thiyaga-blog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Engineering</title>
-      <link>https://thiyaga.xyz/categories/ai-engineering/</link>
+      <link>https://tstreamdoth.github.io/thiyaga-blog/categories/ai-engineering/</link>
       <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/categories/ai-engineering/</guid>
+      <guid>https://tstreamdoth.github.io/thiyaga-blog/categories/ai-engineering/</guid>
       <description></description>
     </item>
   </channel>

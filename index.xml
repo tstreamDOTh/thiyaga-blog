@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog by Thiyagaraj T</title>
-    <link>https://thiyaga.xyz/</link>
+    <link>https://tstreamdoth.github.io/thiyaga-blog/</link>
     <description>Recent content on Blog by Thiyagaraj T</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 10 Sep 2025 10:30:00 +0530</lastBuildDate>
-    <atom:link href="https://thiyaga.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tstreamdoth.github.io/thiyaga-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The 90/10 Rule: The Inconvenient Truth About Agentic AI - It’s All Plumbing, No Brain</title>
-      <link>https://thiyaga.xyz/posts/the-9010-rule-agentic-ai/</link>
+      <link>https://tstreamdoth.github.io/thiyaga-blog/posts/the-9010-rule-agentic-ai/</link>
       <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/posts/the-9010-rule-agentic-ai/</guid>
+      <guid>https://tstreamdoth.github.io/thiyaga-blog/posts/the-9010-rule-agentic-ai/</guid>
       <description>&lt;h3 id=&#34;the-real-challenge-in-building-ai-agents-isnt-the-ai---its-everything-else&#34;&gt;The Real Challenge in Building AI Agents Isn&amp;rsquo;t the AI - It&amp;rsquo;s Everything Else&lt;/h3&gt;&#xA;&lt;p&gt;The AI industry has a marketing problem. We’ve become so infatuated with the &amp;ldquo;intelligence&amp;rdquo; in artificial intelligence that we’ve forgotten the most important truth about building agentic AI systems:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;90% of the work is software engineering, and only 10% is actually about the AI model itself.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;This isn’t just a hot take - it’s a hard-learned lesson from intense 11 months of building AI interview and agentic systems at Eightfold AI, where this realisation became both the problem statement and a career pivot. While everyone’s debating which foundation model has the highest benchmark scores, the real battles are being fought in error handling, state management, and API integrations.&lt;/p&gt;</description>
     </item>
   </channel>

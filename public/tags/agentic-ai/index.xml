@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Agentic AI on Blog by Thiyagaraj T</title>
-    <link>https://tstreamdoth.github.io/thiyaga-blog/tags/agentic-ai/</link>
+    <link>https://thiyaga.xyz/tags/agentic-ai/</link>
     <description>Recent content in Agentic AI on Blog by Thiyagaraj T</description>
     <image>
       <title>Blog by Thiyagaraj T</title>
-      <url>https://tstreamdoth.github.io/thiyaga-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://tstreamdoth.github.io/thiyaga-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://thiyaga.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://thiyaga.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.150.0</generator>
     <language>en</language>
     <lastBuildDate>Wed, 10 Sep 2025 10:30:00 +0530</lastBuildDate>
-    <atom:link href="https://tstreamdoth.github.io/thiyaga-blog/tags/agentic-ai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://thiyaga.xyz/tags/agentic-ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The 90/10 Rule: The Inconvenient Truth About Agentic AI - It’s All Plumbing, No Brain</title>
-      <link>https://tstreamdoth.github.io/thiyaga-blog/posts/the-9010-rule-agentic-ai/</link>
+      <link>https://thiyaga.xyz/posts/the-9010-rule-agentic-ai/</link>
       <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>https://tstreamdoth.github.io/thiyaga-blog/posts/the-9010-rule-agentic-ai/</guid>
+      <guid>https://thiyaga.xyz/posts/the-9010-rule-agentic-ai/</guid>
       <description>The real challenge in building AI agents isn’t the AI - it’s everything else. 90% of the work is software engineering, and only 10% is actually about the AI model itself.</description>
     </item>
   </channel>

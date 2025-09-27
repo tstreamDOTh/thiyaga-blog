@@ -3,7 +3,7 @@ pagination:
   pagerSize: 5
 theme: PaperMod
 
-baseURL: "https://tstreamdoth.github.io/thiyaga-blog/"
+baseURL: "https://thiyaga.xyz/"
 canonifyURLs: true
 
 enableRobotsTXT: true

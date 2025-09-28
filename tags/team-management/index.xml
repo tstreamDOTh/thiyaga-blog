@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Team Management on Blog by Thiyagaraj T</title>
+    <link>https://thiyaga.xyz/tags/team-management/</link>
+    <description>Recent content in Team Management on Blog by Thiyagaraj T</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 28 Sep 2025 10:30:00 +0530</lastBuildDate>
+    <atom:link href="https://thiyaga.xyz/tags/team-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fast AI or Slow AI: The Choice That Makes or Breaks Teams</title>
+      <link>https://thiyaga.xyz/posts/fast-ai-or-slow-ai/</link>
+      <pubDate>Sun, 28 Sep 2025 10:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/posts/fast-ai-or-slow-ai/</guid>
+      <description>&lt;p&gt;Over coffee with Ritendra, VP of AI at Eightfold, our conversation turned to how teams actually build AI today. Ritendra, a recognized leader in the AI space, has shaped teams of all sizes—from small pods to over 200 engineers and researchers—at Google, Facebook, Databricks, and Xerox PARC, gives him a unique and rare perspective on what works and what doesn’t.&lt;/p&gt;&#xA;&lt;p&gt;His take was refreshingly simple: all of AI development can be seen through two lenses—Fast AI and Slow AI.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

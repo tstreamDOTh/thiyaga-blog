@@ -4,12 +4,17 @@ date: 2025-09-10T10:30:00+05:30
 draft: false
 tags: ["AI", "Software Development", "Agentic AI", "Engineering", "Machine Learning"]
 categories: ["AI Engineering"]
-description: "The real challenge in building AI agents isn’t the AI - it’s everything else. 90% of the work is software engineering, and only 10% is actually about the AI model itself."
-showToc: true
+cover:
+  image: "/images/agentic-ai-plumbing.jpg"
+  alt: "Agentic AI Plumbing"
+  caption: "The 90/10 Rule: Building Agentic AI Systems"
+description: ""
+showToc: false
 TocOpen: false
 ---
 
 ### The Real Challenge in Building AI Agents Isn't the AI - It's Everything Else
+
 
 The AI industry has a marketing problem. We’ve become so infatuated with the "intelligence" in artificial intelligence that we’ve forgotten the most important truth about building agentic AI systems: 
 

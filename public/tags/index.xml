@@ -11,20 +11,48 @@
     </image>
     <generator>Hugo -- 0.150.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Sep 2025 10:30:00 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 28 Sep 2025 10:30:00 +0530</lastBuildDate>
     <atom:link href="https://thiyaga.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://thiyaga.xyz/tags/ai/</link>
+      <pubDate>Sun, 28 Sep 2025 10:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Strategy</title>
+      <link>https://thiyaga.xyz/tags/ai-strategy/</link>
+      <pubDate>Sun, 28 Sep 2025 10:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/tags/ai-strategy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Product Development</title>
+      <link>https://thiyaga.xyz/tags/product-development/</link>
+      <pubDate>Sun, 28 Sep 2025 10:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/tags/product-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Development</title>
+      <link>https://thiyaga.xyz/tags/software-development/</link>
+      <pubDate>Sun, 28 Sep 2025 10:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/tags/software-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Team Management</title>
+      <link>https://thiyaga.xyz/tags/team-management/</link>
+      <pubDate>Sun, 28 Sep 2025 10:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/tags/team-management/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Agentic AI</title>
       <link>https://thiyaga.xyz/tags/agentic-ai/</link>
       <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
       <guid>https://thiyaga.xyz/tags/agentic-ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>https://thiyaga.xyz/tags/ai/</link>
-      <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/tags/ai/</guid>
       <description></description>
     </item>
     <item>
@@ -39,13 +67,6 @@
       <link>https://thiyaga.xyz/tags/machine-learning/</link>
       <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
       <guid>https://thiyaga.xyz/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Software Development</title>
-      <link>https://thiyaga.xyz/tags/software-development/</link>
-      <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/tags/software-development/</guid>
       <description></description>
     </item>
   </channel>

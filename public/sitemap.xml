@@ -2,34 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://thiyaga.xyz/tags/agentic-ai/</loc>
-    <lastmod>2025-09-10T10:30:00+05:30</lastmod>
-  </url><url>
     <loc>https://thiyaga.xyz/tags/ai/</loc>
-    <lastmod>2025-09-10T10:30:00+05:30</lastmod>
+    <lastmod>2025-09-28T10:30:00+05:30</lastmod>
   </url><url>
     <loc>https://thiyaga.xyz/categories/ai-engineering/</loc>
-    <lastmod>2025-09-10T10:30:00+05:30</lastmod>
+    <lastmod>2025-09-28T10:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/ai-strategy/</loc>
+    <lastmod>2025-09-28T10:30:00+05:30</lastmod>
   </url><url>
     <loc>https://thiyaga.xyz/</loc>
-    <lastmod>2025-09-10T10:30:00+05:30</lastmod>
+    <lastmod>2025-09-28T10:30:00+05:30</lastmod>
   </url><url>
     <loc>https://thiyaga.xyz/categories/</loc>
+    <lastmod>2025-09-28T10:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/posts/fast-ai-or-slow-ai/</loc>
+    <lastmod>2025-09-28T10:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/posts/</loc>
+    <lastmod>2025-09-28T10:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/product-development/</loc>
+    <lastmod>2025-09-28T10:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/software-development/</loc>
+    <lastmod>2025-09-28T10:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/</loc>
+    <lastmod>2025-09-28T10:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/team-management/</loc>
+    <lastmod>2025-09-28T10:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/agentic-ai/</loc>
     <lastmod>2025-09-10T10:30:00+05:30</lastmod>
   </url><url>
     <loc>https://thiyaga.xyz/tags/engineering/</loc>
     <lastmod>2025-09-10T10:30:00+05:30</lastmod>
   </url><url>
     <loc>https://thiyaga.xyz/tags/machine-learning/</loc>
-    <lastmod>2025-09-10T10:30:00+05:30</lastmod>
-  </url><url>
-    <loc>https://thiyaga.xyz/posts/</loc>
-    <lastmod>2025-09-10T10:30:00+05:30</lastmod>
-  </url><url>
-    <loc>https://thiyaga.xyz/tags/software-development/</loc>
-    <lastmod>2025-09-10T10:30:00+05:30</lastmod>
-  </url><url>
-    <loc>https://thiyaga.xyz/tags/</loc>
     <lastmod>2025-09-10T10:30:00+05:30</lastmod>
   </url><url>
     <loc>https://thiyaga.xyz/posts/the-9010-rule-agentic-ai/</loc>

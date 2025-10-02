@@ -13,7 +13,7 @@ showToc: false
 TocOpen: false
 ---
 
-In a recent conversation, [Ritendra Datta](https://www.linkedin.com/in/ritendradatta/), VP of AI at Eightfold, gave a fresh perspective on AI development. With his extensive background leading AI teams of all sizes—from small pods to over 200 engineers and researchers—across Google, Facebook, Databricks, and Xerox PARC, Ritendra brings a unique perspective on what works and what doesn't in building AI systems at scale.
+In a recent conversation, [Ritendra Datta](https://www.linkedin.com/in/ritendradatta/), VP of AI at Eightfold, gave a fresh perspective on AI development. With his extensive background leading AI teams of all sizes—from small pods to over 200 engineers and researchers—across Google, Facebook & Databricks, Ritendra brings a unique perspective on what works and what doesn't in building AI systems at scale.
 
 This is a refreshingly take: all of AI development can be seen through two lenses—Fast AI and Slow AI.
 

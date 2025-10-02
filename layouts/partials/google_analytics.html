@@ -1,0 +1,25 @@
+{{- /* Google Analytics support for multiple configuration formats */ -}}
+{{- $analytics_id := "" -}}
+
+{{- /* Check Hugo Blox format first */ -}}
+{{- if site.Params.marketing.analytics.google_analytics -}}
+  {{- $analytics_id = site.Params.marketing.analytics.google_analytics -}}
+{{- /* Fallback to Hugo's built-in format */ -}}
+{{- else if site.GoogleAnalytics -}}
+  {{- $analytics_id = site.GoogleAnalytics -}}
+{{- /* Check traditional params format */ -}}
+{{- else if site.Params.analytics.google.SiteVerificationTag -}}
+  {{- $analytics_id = site.Params.analytics.google.SiteVerificationTag -}}
+{{- end -}}
+
+{{- if $analytics_id -}}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ $analytics_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ $analytics_id }}');
+</script>
+{{- end -}}

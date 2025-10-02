@@ -28,6 +28,10 @@ params:
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
+  marketing:
+    analytics:
+      google_analytics: 'G-7G0H3X7B2Y'
+
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true

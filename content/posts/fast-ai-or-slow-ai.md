@@ -13,9 +13,9 @@ showToc: false
 TocOpen: false
 ---
 
-Over coffee with Ritendra, VP of AI at Eightfold, our conversation turned to how teams actually build AI today. Ritendra, a recognized leader in the AI space, has shaped teams of all sizes—from small pods to over 200 engineers and researchers—at Google, Facebook, Databricks, and Xerox PARC, gives him a unique and rare perspective on what works and what doesn’t.
+In a recent conversation, [Ritendra Datta](https://www.linkedin.com/in/ritendradatta/), VP of AI at Eightfold, gave a fresh perspective on AI development. With his extensive background leading AI teams of all sizes—from small pods to over 200 engineers and researchers—across Google, Facebook, Databricks, and Xerox PARC, Ritendra brings a unique perspective on what works and what doesn't in building AI systems at scale.
 
-His take was refreshingly simple: all of AI development can be seen through two lenses—Fast AI and Slow AI.
+This is a refreshingly take: all of AI development can be seen through two lenses—Fast AI and Slow AI.
 
 The interesting part? Each path demands a completely different mindset, and very few teams can do both well.
 
@@ -29,16 +29,19 @@ Here's the kicker: **The things that make you great at Fast AI can actually hurt
 
 ## Different Goals, Different Metrics
 
-### Fast AI (1 month):
+### Fast AI (1-3 months):
 - Are we first to market with this feature?
 - How quickly can we validate product-market fit?
 - Can we ship an MVP this sprint?
 - Are users adopting our new AI features?
+- Does the feature create a clear “wow” moment for users?
 
 ### Slow AI (3-12 months):
-- Does our system stay up when everyone uses it?
-- Do our models still work next year?
-- Are we building on solid foundations?
+- Can the system adapt and scale to new use cases?
+- Are we putting the right safeguards in place to ensure safety and trust?
+- How to handle edge cases and remain reliable over time?
+- Are we building on strong, future-proof foundations?
+- Improve the system using a feedback loop.
 
 Some teams focus on Fast AI metrics. They race to launch, ship MVPs quickly, and capture market share. Others focus on Slow AI. They build rock-solid systems and prioritize long-term stability over speed.
 

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>RNN on Blog by Thiyagaraj T</title>
-    <link>https://thiyaga.xyz/tags/rnn/</link>
+    <link>http://localhost:1313/tags/rnn/</link>
     <description>Recent content in RNN on Blog by Thiyagaraj T</description>
     <image>
       <title>Blog by Thiyagaraj T</title>
-      <url>https://thiyaga.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://thiyaga.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.150.0</generator>
     <language>en</language>
     <lastBuildDate>Sun, 22 Feb 2026 10:30:00 +0530</lastBuildDate>
-    <atom:link href="https://thiyaga.xyz/tags/rnn/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/rnn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How a Tiny RNN Discovered Grammar and Changed AI Forever</title>
-      <link>https://thiyaga.xyz/posts/elman/</link>
+      <link>http://localhost:1313/posts/elman/</link>
       <pubDate>Sun, 22 Feb 2026 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/posts/elman/</guid>
+      <guid>http://localhost:1313/posts/elman/</guid>
       <description>&lt;p&gt;In 1990, Jeffrey Elman ran a small experiment with a tiny recurrent network.&lt;/p&gt;
 &lt;p&gt;No billion parameters.&lt;br&gt;
 No attention.&lt;br&gt;

@@ -10,9 +10,9 @@
     <atom:link href="https://thiyaga.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Finding Structure in Time: Decoding the 1990 Paper</title>
-      <link>https://thiyaga.xyz/posts/elman/</link>
+      <link>https://thiyaga.xyz/posts/elman-paper/</link>
       <pubDate>Sun, 22 Feb 2026 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/posts/elman/</guid>
+      <guid>https://thiyaga.xyz/posts/elman-paper/</guid>
       <description>&lt;p&gt;In 1990, Jeffrey Elman ran a small experiment with a tiny recurrent network.&lt;/p&gt;&#xA;&lt;p&gt;No billion parameters.&lt;br&gt;&#xA;No attention.&lt;br&gt;&#xA;No massive datasets.&lt;/p&gt;&#xA;&lt;p&gt;Just a simple question:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;If a model learns to predict the next word, can it &lt;em&gt;discover structure on its own&lt;/em&gt;?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;The answer changed how we think about intelligence.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-experiment-learning-grammar-without-rules&#34;&gt;The Experiment: Learning Grammar Without Rules&lt;/h2&gt;&#xA;&lt;p&gt;Elman trained a simple recurrent network (now called an Elman network) on sentences generated from a small artificial grammar.&lt;/p&gt;</description>
     </item>
     <item>

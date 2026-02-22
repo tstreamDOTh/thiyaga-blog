@@ -1,5 +1,5 @@
 ---
-title: "How a Tiny RNN Discovered Grammar and Changed AI Forever"
+title: "Finding Structure in Time: Decoding the 1990 Paper"
 date: 2026-02-22T10:30:00+05:30
 draft: false
 tags: ["AI", "RNN", "Transformers", "LLM"]

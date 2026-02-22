@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>AI Strategy on Blog by Thiyagaraj T</title>
-    <link>http://localhost:1313/tags/ai-strategy/</link>
+    <link>https://thiyaga.xyz/tags/ai-strategy/</link>
     <description>Recent content in AI Strategy on Blog by Thiyagaraj T</description>
     <image>
       <title>Blog by Thiyagaraj T</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://thiyaga.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://thiyaga.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.150.0</generator>
     <language>en</language>
     <lastBuildDate>Sun, 28 Sep 2025 10:30:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ai-strategy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://thiyaga.xyz/tags/ai-strategy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fast AI or Slow AI: The Choice That Makes or Breaks Teams</title>
-      <link>http://localhost:1313/posts/fast-ai-or-slow-ai/</link>
+      <link>https://thiyaga.xyz/posts/fast-ai-or-slow-ai/</link>
       <pubDate>Sun, 28 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/posts/fast-ai-or-slow-ai/</guid>
+      <guid>https://thiyaga.xyz/posts/fast-ai-or-slow-ai/</guid>
       <description>&lt;p&gt;In a recent conversation, &lt;a href=&#34;https://www.linkedin.com/in/ritendradatta/&#34;&gt;Ritendra Datta&lt;/a&gt;, VP of AI at Eightfold, gave a fresh perspective on AI development. With his extensive background leading AI teams of all sizes—from small pods to over 200 engineers and researchers—across Google, Facebook &amp;amp; Databricks, Ritendra brings a unique perspective on what works and what doesn&amp;rsquo;t in building AI systems at scale.&lt;/p&gt;
 &lt;p&gt;This is a refreshingly take: all of AI development can be seen through two lenses—Fast AI and Slow AI.&lt;/p&gt;</description>
     </item>

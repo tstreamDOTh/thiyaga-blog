@@ -11,13 +11,34 @@
     </image>
     <generator>Hugo -- 0.150.0</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Sep 2025 10:30:00 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 22 Feb 2026 10:30:00 +0530</lastBuildDate>
     <atom:link href="https://thiyaga.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
       <link>https://thiyaga.xyz/tags/ai/</link>
-      <pubDate>Sun, 28 Sep 2025 10:30:00 +0530</pubDate>
+      <pubDate>Sun, 22 Feb 2026 10:30:00 +0530</pubDate>
       <guid>https://thiyaga.xyz/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://thiyaga.xyz/tags/llm/</link>
+      <pubDate>Sun, 22 Feb 2026 10:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RNN</title>
+      <link>https://thiyaga.xyz/tags/rnn/</link>
+      <pubDate>Sun, 22 Feb 2026 10:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/tags/rnn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transformers</title>
+      <link>https://thiyaga.xyz/tags/transformers/</link>
+      <pubDate>Sun, 22 Feb 2026 10:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/tags/transformers/</guid>
       <description></description>
     </item>
     <item>

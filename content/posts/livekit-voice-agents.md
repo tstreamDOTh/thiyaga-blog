@@ -171,35 +171,6 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 
 ---
 
-## Quick reference: the gotchas
-
-A condensed list of the specific traps behind these principles, for readers building on LiveKit today:
-
-1. Register `add_shutdown_callback` **before** `session.start()`; a user leaving during the greeting otherwise skips all cleanup.
-2. Raise `shutdown_process_timeout` well past your real cleanup time (ours: 1200s).
-3. An exception escaping your entrypoint can skip shutdown callbacks entirely — keep the entrypoint from raising. (`ctx.wait_for_participant()` can both hang forever on connection flaps and raise on disconnect; we removed it.)
-4. Set `close_on_disconnect=False` if you want users to be able to rejoin.
-5. Client `Connected` fires before the data channel is writable — have the client publish a "ready" message; never push state from `participant_connected`. (This silently dropped packets, deterministically on Firefox.)
-6. Egress start is not idempotent — check `list_egress(active=True)` before starting, and put unique tokens in output paths.
-7. `stop_egress` on a finished egress throws `failed_precondition`; the reliable recording start time is in the stop response (`file_results[0].started_at`, in nanoseconds).
-8. Closing the room auto-ends egress, and finalization takes minutes — consume the webhook, don't poll storage.
-9. Deploy drain periods default shorter than a long call and kill sessions with a misleading `USER_INITIATED` reason.
-10. The supervisor kills a process after ~60s of missed heartbeats — any sync call in your async pipeline is a latent kill.
-11. `interruption` mode governs barge-in; `endpointing` governs turn-end. Long-form conversation needs `max_delay` in seconds.
-12. Noise cancellation and VAD must be tuned together; the egress recording is pre-NC audio, the agent hears post-NC — diff them when debugging.
-13. On framework ≥1.5, false interruptions auto-resume — check `ev.resumed` before regenerating, or the agent speaks twice.
-14. STT splits one utterance into multiple history items — merge consecutive turns, with boundaries at reconnects so speech isn't merged across a disconnect.
-15. Short utterances can miss their VAD start timestamp (STT beats VAD) — backfill it, or downstream code drops the turn.
-16. Avatars join as participants: filter them out of your "user joined" handlers, and plan the "detach avatar, keep voice" path.
-17. A barge-in can truncate speech *after* your state machine already advanced — track what was actually delivered and roll back undelivered turns.
-18. `allow_interruptions=False` doesn't protect a greeting from a disconnect before the audio track binds.
-19. Attach exception-logging done-callbacks to every fire-and-forget task.
-20. Your file formats and paths are cross-service contracts: an SDK minor version added a new chat item type and broke every transcript upload; a float-vs-int timestamp broke recovery silently.
-21. Dev-mode workers with the same agent name take production jobs — isolate by project.
-22. Observability data expires; escalate while the evidence exists.
-
----
-
 ## Closing
 
 None of this is exotic. It's ordinary distributed-systems discipline — durability, idempotency, fallbacks, observability — applied to a medium with an unusual failure mode. When a web service fails, the user sees an error page. When a voice agent fails, a human sits in silence, wondering if anyone is there. Build for that.

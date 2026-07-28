@@ -13,7 +13,7 @@ showToc: false
 TocOpen: false
 ---
 
-*Voice agents are easy to demo and hard to scale. After nine architectures and a million real conversations, we landed on one that keeps an agent natural, fast, and predictable: fire every possible response in parallel, let a fast router pick the winner. Here's the journey, and why this design works.*
+*Voice agents are easy to demo and hard to scale. We landed on an architecture that keeps an agent natural, fast, and predictable: fire every possible response in parallel, let a fast router pick the winner. Here's the journey, and why this design works.*
 
 ---
 

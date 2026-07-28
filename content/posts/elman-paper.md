@@ -5,9 +5,9 @@ draft: false
 tags: ["AI", "RNN", "Transformers", "LLM"]
 categories: ["AI Engineering"]
 cover:
-  image: "/images/movie.webp"
-  alt: "All the Harry Potter movie frames compressed into a single image — what happens when time collapses into state?"
-  caption: "All the Harry Potter movie frames compressed into a single image — what happens when time collapses into state?"
+  image: "/images/elman-banner.png"
+  alt: "A sequence of circles in time with an arc looping back — recurrence"
+  caption: "A sequence unfolding in time, with a loop back — what happens when time collapses into state?"
 description: ""
 showToc: false
 TocOpen: false

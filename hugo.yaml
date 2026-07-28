@@ -4,7 +4,6 @@ pagination:
 theme: PaperMod
 
 baseURL: "https://thiyaga.xyz/"
-canonifyURLs: true
 
 enableRobotsTXT: true
 buildDrafts: false

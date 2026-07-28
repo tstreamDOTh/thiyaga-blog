@@ -1,10 +1,14 @@
 ---
-title: "Speculative Routing: The Architecture That Scales Voice Agents Beyond Demos to a Million Conversations"
+title: "Speculative Routing: An Architecture for Voice Agents"
 date: 2026-07-29T00:30:00+05:30
 draft: false
 tags: ["AI", "Voice AI", "Agentic AI", "Architecture", "LLM", "Engineering"]
 categories: ["AI Engineering"]
-description: "Voice agents are easy to demo and hard to scale. After nine architectures and a million real conversations, we landed on one that keeps an agent natural, fast, and predictable."
+cover:
+  image: "/images/speculative-routing-banner.png"
+  alt: "Three parallel streams racing toward a router — one wins and continues"
+  caption: "Fire every possible response in parallel, let a fast router pick the winner"
+description: "A production architecture for scaling voice agents beyond demos - to a million real conversations."
 showToc: false
 TocOpen: false
 ---

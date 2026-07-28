@@ -5,7 +5,7 @@ draft: false
 tags: ["AI", "Software Development", "Team Management", "AI Strategy", "Product Development"]
 categories: ["AI Engineering"]
 cover:
-  image: "/images/fast-slow.png"
+  image: "/images/fast-slow-banner.png"
   alt: "Fast AI vs Slow AI"
   caption: "The Choice That Makes or Breaks Teams"
 description: ""

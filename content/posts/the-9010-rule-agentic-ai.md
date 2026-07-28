@@ -5,7 +5,7 @@ draft: false
 tags: ["AI", "Software Development", "Agentic AI", "Engineering", "Machine Learning"]
 categories: ["AI Engineering"]
 cover:
-  image: "/images/agentic-ai-plumbing.jpg"
+  image: "/images/9010-banner.png"
   alt: "Agentic AI Plumbing"
   caption: "The 90/10 Rule: Building Agentic AI Systems"
 description: ""

@@ -1,3 +1,9 @@
+/* Tighten the gap between the home intro and the post list */
+.first-entry.home-info {
+    min-height: unset;
+    margin: calc(var(--gap) * 2) 0 var(--gap) 0;
+}
+
 /* Custom styles for horizontal layout with thumbnail images - only on list pages */
 
 /* Create horizontal layout for blog posts on list pages only */

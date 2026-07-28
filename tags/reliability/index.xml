@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Reliability on Blog by Thiyagaraj T</title>
+		<link>https://thiyaga.xyz/tags/reliability/</link>
+		<description>Recent content in Reliability on Blog by Thiyagaraj T</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 29 Jul 2026 00:45:00 +0530</lastBuildDate>
+		
+			<atom:link href="https://thiyaga.xyz/tags/reliability/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>10 Principles for Building Reliable Voice Agents on LiveKit</title>
+				<link>https://thiyaga.xyz/posts/livekit-voice-agents/</link>
+				<pubDate>Wed, 29 Jul 2026 00:45:00 +0530</pubDate>
+				<guid>https://thiyaga.xyz/posts/livekit-voice-agents/</guid>
+				<description>&lt;p&gt;Voice agent demos are easy to build. A LiveKit worker, an STT → LLM → TTS pipeline, and you have something that talks. The hard part is making it reliable.&lt;/p&gt;&#xA;&lt;p&gt;We run AI interview agents on LiveKit Cloud. An interview lasts up to an hour. A lost recording is a compliance problem. A lost transcript means the candidate has to redo the interview. A silent agent means a human sitting in an empty room, wondering if anyone is there.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

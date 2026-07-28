@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Voice AI on Blog by Thiyagaraj T</title>
+    <link>https://thiyaga.xyz/tags/voice-ai/</link>
+    <description>Recent content in Voice AI on Blog by Thiyagaraj T</description>
+    <image>
+      <title>Blog by Thiyagaraj T</title>
+      <url>https://thiyaga.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://thiyaga.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.150.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Jul 2026 00:30:00 +0530</lastBuildDate>
+    <atom:link href="https://thiyaga.xyz/tags/voice-ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Speculative Routing: The Architecture That Scales Voice Agents Beyond Demos to a Million Conversations</title>
+      <link>https://thiyaga.xyz/posts/speculative-routing/</link>
+      <pubDate>Wed, 29 Jul 2026 00:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/posts/speculative-routing/</guid>
+      <description>Voice agents are easy to demo and hard to scale. After nine architectures and a million real conversations, we landed on one that keeps an agent natural, fast, and predictable.</description>
+    </item>
+  </channel>
+</rss>

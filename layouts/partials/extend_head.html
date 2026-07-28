@@ -1,0 +1,17 @@
+{{- /* Force content render so render hooks (e.g. mermaid) set page store flags before we check them */ -}}
+{{- if .IsPage }}{{ $_ := .Content }}{{ end -}}
+{{- if .Store.Get "hasMermaid" }}
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  mermaid.initialize({ startOnLoad: true, theme: "neutral", securityLevel: "loose" });
+</script>
+<style>
+  pre.mermaid {
+    background: transparent;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+  }
+</style>
+{{- end }}

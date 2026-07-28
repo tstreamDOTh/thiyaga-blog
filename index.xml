@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blog by Thiyagaraj T</title>
-    <link>https://thiyaga.xyz/</link>
-    <description>Recent content on Blog by Thiyagaraj T</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 22 Feb 2026 10:30:00 +0530</lastBuildDate>
-    <atom:link href="https://thiyaga.xyz/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Finding Structure in Time: Decoding the 1990 Paper</title>
-      <link>https://thiyaga.xyz/posts/elman-paper/</link>
-      <pubDate>Sun, 22 Feb 2026 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/posts/elman-paper/</guid>
-      <description>&lt;p&gt;In 1990, Jeffrey Elman ran a small experiment with a tiny recurrent network.&lt;/p&gt;&#xA;&lt;p&gt;No billion parameters.&lt;br&gt;&#xA;No attention.&lt;br&gt;&#xA;No massive datasets.&lt;/p&gt;&#xA;&lt;p&gt;Just a simple question:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;If a model learns to predict the next word, can it &lt;em&gt;discover structure on its own&lt;/em&gt;?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;The answer changed how we think about intelligence.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-experiment-learning-grammar-without-rules&#34;&gt;The Experiment: Learning Grammar Without Rules&lt;/h2&gt;&#xA;&lt;p&gt;Elman trained a simple recurrent network (now called an Elman network) on sentences generated from a small artificial grammar.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Fast AI or Slow AI: The Choice That Makes or Breaks Teams</title>
-      <link>https://thiyaga.xyz/posts/fast-ai-or-slow-ai/</link>
-      <pubDate>Sun, 28 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/posts/fast-ai-or-slow-ai/</guid>
-      <description>&lt;p&gt;In a recent conversation, &lt;a href=&#34;https://www.linkedin.com/in/ritendradatta/&#34;&gt;Ritendra Datta&lt;/a&gt;, VP of AI at Eightfold, gave a fresh perspective on AI development. With his extensive background leading AI teams of all sizes—from small pods to over 200 engineers and researchers—across Google, Facebook &amp;amp; Databricks, Ritendra brings a unique perspective on what works and what doesn&amp;rsquo;t in building AI systems at scale.&lt;/p&gt;&#xA;&lt;p&gt;This is a refreshingly take: all of AI development can be seen through two lenses—Fast AI and Slow AI.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The 90/10 Rule: The Inconvenient Truth About Agentic AI - It’s All Plumbing, No Brain</title>
-      <link>https://thiyaga.xyz/posts/the-9010-rule-agentic-ai/</link>
-      <pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/posts/the-9010-rule-agentic-ai/</guid>
-      <description>&lt;h3 id=&#34;the-real-challenge-in-building-ai-agents-isnt-the-ai---its-everything-else&#34;&gt;The Real Challenge in Building AI Agents Isn&amp;rsquo;t the AI - It&amp;rsquo;s Everything Else&lt;/h3&gt;&#xA;&lt;p&gt;The AI industry has a marketing problem. We’ve become so infatuated with the &amp;ldquo;intelligence&amp;rdquo; in artificial intelligence that we’ve forgotten the most important truth about building agentic AI systems:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;90% of the work is software engineering, and only 10% is actually about the AI model itself.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;This isn’t just a hot take - it’s a hard-learned lesson from intense 11 months of building AI interview and agentic systems at Eightfold AI, where this realisation became both the problem statement and a career pivot. While everyone’s debating which foundation model has the highest benchmark scores, the real battles are being fought in error handling, state management, and API integrations.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Blog by Thiyagaraj T</title>
+		<link>https://thiyaga.xyz/</link>
+		<description>Recent content on Blog by Thiyagaraj T</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 29 Jul 2026 00:30:00 +0530</lastBuildDate>
+		
+			<atom:link href="https://thiyaga.xyz/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Speculative Routing: The Architecture That Scales Voice Agents Beyond Demos to a Million Conversations</title>
+				<link>https://thiyaga.xyz/posts/speculative-routing/</link>
+				<pubDate>Wed, 29 Jul 2026 00:30:00 +0530</pubDate>
+				<guid>https://thiyaga.xyz/posts/speculative-routing/</guid>
+				<description>&lt;p&gt;&lt;em&gt;Voice agents are easy to demo and hard to scale. After nine architectures and a million real conversations, we landed on one that keeps an agent natural, fast, and predictable: fire every possible response in parallel, let a fast router pick the winner. Here&amp;rsquo;s the journey, and why this design works.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-problem-nobodys-demo-solves&#34;&gt;The problem nobody&amp;rsquo;s demo solves&lt;/h2&gt;&#xA;&lt;p&gt;Every voice agent demo looks the same: clean audio, a cooperative user, a short scripted exchange. Then you ship it, and two things break immediately.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Finding Structure in Time: Decoding the 1990 Paper</title>
+				<link>https://thiyaga.xyz/posts/elman-paper/</link>
+				<pubDate>Sun, 22 Feb 2026 10:30:00 +0530</pubDate>
+				<guid>https://thiyaga.xyz/posts/elman-paper/</guid>
+				<description>&lt;p&gt;In 1990, Jeffrey Elman ran a small experiment with a tiny recurrent network.&lt;/p&gt;&#xA;&lt;p&gt;No billion parameters.&lt;br&gt;&#xA;No attention.&lt;br&gt;&#xA;No massive datasets.&lt;/p&gt;&#xA;&lt;p&gt;Just a simple question:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;If a model learns to predict the next word, can it &lt;em&gt;discover structure on its own&lt;/em&gt;?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;The answer changed how we think about intelligence.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-experiment-learning-grammar-without-rules&#34;&gt;The Experiment: Learning Grammar Without Rules&lt;/h2&gt;&#xA;&lt;p&gt;Elman trained a simple recurrent network (now called an Elman network) on sentences generated from a small artificial grammar.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Fast AI or Slow AI: The Choice That Makes or Breaks Teams</title>
+				<link>https://thiyaga.xyz/posts/fast-ai-or-slow-ai/</link>
+				<pubDate>Sun, 28 Sep 2025 10:30:00 +0530</pubDate>
+				<guid>https://thiyaga.xyz/posts/fast-ai-or-slow-ai/</guid>
+				<description>&lt;p&gt;In a recent conversation, &lt;a href=&#34;https://www.linkedin.com/in/ritendradatta/&#34;&gt;Ritendra Datta&lt;/a&gt;, VP of AI at Eightfold, gave a fresh perspective on AI development. With his extensive background leading AI teams of all sizes—from small pods to over 200 engineers and researchers—across Google, Facebook &amp;amp; Databricks, Ritendra brings a unique perspective on what works and what doesn&amp;rsquo;t in building AI systems at scale.&lt;/p&gt;&#xA;&lt;p&gt;This is a refreshingly take: all of AI development can be seen through two lenses—Fast AI and Slow AI.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The 90/10 Rule: The Inconvenient Truth About Agentic AI - It’s All Plumbing, No Brain</title>
+				<link>https://thiyaga.xyz/posts/the-9010-rule-agentic-ai/</link>
+				<pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>
+				<guid>https://thiyaga.xyz/posts/the-9010-rule-agentic-ai/</guid>
+				<description>&lt;h3 id=&#34;the-real-challenge-in-building-ai-agents-isnt-the-ai---its-everything-else&#34;&gt;The Real Challenge in Building AI Agents Isn&amp;rsquo;t the AI - It&amp;rsquo;s Everything Else&lt;/h3&gt;&#xA;&lt;p&gt;The AI industry has a marketing problem. We’ve become so infatuated with the &amp;ldquo;intelligence&amp;rdquo; in artificial intelligence that we’ve forgotten the most important truth about building agentic AI systems:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;90% of the work is software engineering, and only 10% is actually about the AI model itself.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;This isn’t just a hot take - it’s a hard-learned lesson from intense 11 months of building AI interview and agentic systems at Eightfold AI, where this realisation became both the problem statement and a career pivot. While everyone’s debating which foundation model has the highest benchmark scores, the real battles are being fought in error handling, state management, and API integrations.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

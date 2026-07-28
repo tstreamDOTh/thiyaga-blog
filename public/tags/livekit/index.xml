@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Categories on Blog by Thiyagaraj T</title>
-    <link>https://thiyaga.xyz/categories/</link>
-    <description>Recent content in Categories on Blog by Thiyagaraj T</description>
+    <title>LiveKit on Blog by Thiyagaraj T</title>
+    <link>https://thiyaga.xyz/tags/livekit/</link>
+    <description>Recent content in LiveKit on Blog by Thiyagaraj T</description>
     <image>
       <title>Blog by Thiyagaraj T</title>
       <url>https://thiyaga.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
@@ -12,13 +12,13 @@
     <generator>Hugo -- 0.150.0</generator>
     <language>en</language>
     <lastBuildDate>Wed, 29 Jul 2026 00:45:00 +0530</lastBuildDate>
-    <atom:link href="https://thiyaga.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://thiyaga.xyz/tags/livekit/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AI Engineering</title>
-      <link>https://thiyaga.xyz/categories/ai-engineering/</link>
+      <title>10 Principles for Building Reliable Voice Agents on LiveKit</title>
+      <link>https://thiyaga.xyz/posts/livekit-voice-agents/</link>
       <pubDate>Wed, 29 Jul 2026 00:45:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/categories/ai-engineering/</guid>
-      <description></description>
+      <guid>https://thiyaga.xyz/posts/livekit-voice-agents/</guid>
+      <description>Ten hard-earned principles for keeping voice agents reliable in production on LiveKit.</description>
     </item>
   </channel>
 </rss>

@@ -4,6 +4,9 @@ date: 2026-07-29T00:30:00+05:30
 draft: false
 tags: ["AI", "Voice AI", "Agentic AI", "Architecture", "LLM", "Engineering"]
 categories: ["AI Engineering"]
+coauthors:
+  - name: Adarsh Shah
+    url: https://example.com/adarsh-shah
 cover:
   image: "/images/speculative-routing-banner.png"
   alt: "Three parallel streams racing toward a router - one wins and continues"

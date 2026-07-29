@@ -255,4 +255,4 @@ The spectrum makes it look like more autonomy means more capability. For real-ti
 
 ---
 
-*These learnings come from leading the team building an AI interviewer scaled for a million interviews. Full credit to the team at Eightfold - engineers who built, tested, and explored different architectures, learning and evolving at every step without losing momentum. Each iteration taught us a lesson that made it into this post. And this is just one of the hundreds of problems we've solved to get there.*
+*Kudos to the team at Eightfold - the engineers who built, tested, and explored different architectures for an AI interviewer that scaled to a million interviews, learning and evolving at every step without losing momentum. Each iteration taught us a lesson that made it into this post. And this is just one of the hundreds of problems we've solved to get there.*

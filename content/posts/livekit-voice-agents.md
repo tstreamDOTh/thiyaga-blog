@@ -133,4 +133,4 @@ None of this is exotic. It's ordinary distributed-systems discipline (durability
 
 ---
 
-*These learnings come from leading the team building an AI interviewer at Eightfold. Full credit to the team - engineers who debugged every one of these incidents, often live with a candidate on the line, and turned each one into a fix, a metric, or a principle in this post. Seven months of production hardening is a team sport.*
+*Kudos to the team at Eightfold - the engineers who debugged every one of these incidents, often live with a candidate on the line, and turned each one into a fix, a metric, or a principle in this post. Seven months of production hardening is a team sport.*

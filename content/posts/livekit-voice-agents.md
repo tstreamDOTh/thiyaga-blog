@@ -130,3 +130,7 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 ## Closing
 
 None of this is exotic. It's ordinary distributed-systems discipline (durability, idempotency, fallbacks, observability) applied to a medium with an unusual failure mode. When a web service fails, the user sees an error page. When a voice agent fails, a human sits in silence, wondering if anyone is there. Build for that.
+
+---
+
+*These learnings come from leading the team building an AI interviewer at Eightfold. Full credit to the team - engineers who debugged every one of these incidents, often live with a candidate on the line, and turned each one into a fix, a metric, or a principle in this post. Seven months of production hardening is a team sport.*

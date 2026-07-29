@@ -6,14 +6,14 @@ tags: ["AI", "Voice AI", "Agentic AI", "Architecture", "LLM", "Engineering"]
 categories: ["AI Engineering"]
 cover:
   image: "/images/speculative-routing-banner.png"
-  alt: "Three parallel streams racing toward a router — one wins and continues"
+  alt: "Three parallel streams racing toward a router - one wins and continues"
   caption: "Fire every possible response in parallel, let a fast router pick the winner"
 description: "A production architecture for scaling voice agents beyond demos - to a million real conversations."
 showToc: false
 TocOpen: false
 ---
 
-*Voice agents are easy to demo and hard to scale. We landed on an architecture that keeps an agent natural, fast, and predictable: fire every possible response in parallel, let a fast router pick the winner. Here's the journey, and why this design works.*
+*Voice agents are easy to demo and hard to scale. The architecture we ended up with fires every possible response in parallel and lets a fast router pick the winner mid-flight. This post walks through everything we tried before it, and why this design is the one that survived.*
 
 ---
 
@@ -23,9 +23,9 @@ Every voice agent demo looks the same: clean audio, a cooperative user, a short 
 
 **First, latency.** In text chat, a 3-second pause is a spinner. In voice, it's a dead line. Humans feel awkward at ~500ms of silence and assume failure at ~2s. Your budget for everything - speech recognition, deciding what to say, generating it, synthesizing audio - is under a second. Most off-the-shelf agent stacks are built for correctness, not for a hard real-time deadline. They spend your entire budget thinking.
 
-**Second, control.** The obvious fix for latency is a speech-to-speech model with one big prompt. It's fast, and it's a slot machine - no control over what gets said, when, or how. The obvious fix for control is a workflow engine with explicit steps. It's predictable, and it talks like an IVR menu.
+**Second, control.** The obvious fix for latency is a speech-to-speech model with one big prompt. It's fast, but it's a slot machine. You have no control over what gets said, when, or how. The obvious fix for control is a workflow engine with explicit steps. It's predictable, and it talks like an IVR menu.
 
-Real-time conversation agents live between those two failure modes. And here's the premise of this post: you can't understand why the final architecture looks the way it does without first seeing what didn't work. So before we get to Speculative Routing, we'll walk through everything we tried, in order.
+Real-time conversation agents live between those two failure modes. I don't think you can understand why our final architecture looks the way it does without seeing what didn't work first. So before we get to Speculative Routing, we'll walk through everything we tried, in order.
 
 ## The autonomy spectrum
 
@@ -44,7 +44,7 @@ flowchart LR
 
 Moving right gives you flexibility and costs predictability. What that framing misses, and what voice makes obvious fast: moving right also costs **latency**. Every extra LLM decision on the hot path is 300-800ms of silence. The whole game is deciding which decisions belong on the hot path at all.
 
-We walked nearly this entire spectrum, in both directions. Here's the journey.
+We walked nearly this entire spectrum, in both directions.
 
 ---
 
@@ -101,7 +101,7 @@ flowchart LR
 
 We swapped speech-to-speech for a cascaded pipeline: dedicated STT, text LLM, dedicated TTS. Transcription quality jumped. Audio became realistic and controllable. Responses and interruption handling improved a lot.
 
-The cost: more transformations, more latency. But the latency is manageable **if every hop lives on the same infrastructure**. The killer isn't model inference - it's server hops.
+The cost: more transformations, more latency. But the latency is manageable **if every hop lives on the same infrastructure**. Most of ours came from server hops, not model inference.
 
 > **Learning:** text-to-text quality beats speech-to-speech by a wide margin, and the latency penalty is an infrastructure problem, not a model problem. Co-locate the pipeline.
 
@@ -196,7 +196,7 @@ One generic prompt has a ceiling. We split it into **specialized templates** per
 
 ## The architecture that survived: Speculative Routing
 
-Here's where it landed. We call it **Speculative Routing**: a fully async state machine where every turn fires all possible responses in parallel - speculatively, before the routing decision exists - and a fast router picks the winner mid-flight. It drives a cascaded voice pipeline in production today. It sits at the state-machine point on the autonomy spectrum on purpose - enough structure to be predictable, enough LLM routing to be conversational. Every design decision follows one rule: *nothing blocks the path from user speech to first audio byte*.
+We call the result **Speculative Routing**: a fully async state machine where every turn fires all possible responses in parallel - speculatively, before the routing decision exists - and a fast router picks the winner mid-flight. It drives a cascaded voice pipeline in production today. It sits at the state-machine point on the autonomy spectrum on purpose - enough structure to be predictable, enough LLM routing to be conversational. Every design decision follows one rule: *nothing blocks the path from user speech to first audio byte*.
 
 ```mermaid
 flowchart TB
@@ -255,4 +255,4 @@ The spectrum makes it look like more autonomy means more capability. For real-ti
 
 ---
 
-*These learnings come from leading the team building an AI interviewer scaled for a million interviews. Full credit to the team at Eightfold - engineers who built, tested, and rebuilt nine architectures, learning and evolving at every step without losing momentum. None of the iterations were wasted - each one taught us a lesson that made it into this post. And this is just one of the hundreds of problems we've solved to get there.*
+*These learnings come from leading the team building an AI interviewer scaled for a million interviews. Full credit to the team at Eightfold - engineers who built, tested, and explored different architectures, learning and evolving at every step without losing momentum. Each iteration taught us a lesson that made it into this post. And this is just one of the hundreds of problems we've solved to get there.*

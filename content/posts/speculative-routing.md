@@ -16,7 +16,7 @@ showToc: false
 TocOpen: false
 ---
 
-*Voice agents are easy to demo and hard to scale. The architecture we ended up with fires every possible response in parallel and lets a fast router pick the winner mid-flight. This post walks through everything we tried before it, and why this design is the one that survived.*
+*Voice agents are easy to demo and hard to scale. The architecture we ended up with fires every possible response in parallel and lets a fast router pick the winner mid-flight. This post walks through everything we tried before it, and why this design is the one we kept.*
 
 ---
 
@@ -197,7 +197,7 @@ One generic prompt has a ceiling. We split it into **specialized templates** per
 
 ---
 
-## The architecture that survived: Speculative Routing
+## The architecture that worked: Speculative Routing
 
 We call the result **Speculative Routing**: a fully async state machine where every turn fires all possible responses in parallel - speculatively, before the routing decision exists - and a fast router picks the winner mid-flight. It drives a cascaded voice pipeline in production today. It sits at the state-machine point on the autonomy spectrum on purpose - enough structure to be predictable, enough LLM routing to be conversational. Every design decision follows one rule: *nothing blocks the path from user speech to first audio byte*.
 

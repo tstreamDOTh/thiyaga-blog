@@ -17,7 +17,7 @@ Voice agent demos are easy to build. A LiveKit worker, an STT → LLM → TTS pi
 
 We run AI interview agents on LiveKit Cloud. An interview lasts up to an hour. A lost recording is a compliance problem. A lost transcript means the candidate has to redo the interview. A silent agent means a human sitting in an empty room, wondering if anyone is there.
 
-Over seven months of production incidents, we fixed dozens of reliability issues. Some were in our code, some in our configuration, some in how we used the platform. What we learned condensed into ten principles. For each one: what it means, why we believe it, and how to apply it.
+Over seven months of production incidents, we fixed dozens of reliability issues. Some were in our code, some in our configuration, some in how we used the platform. This post is what we learned, condensed into ten principles. For each one: what it means, why we believe it, and how to apply it.
 
 ---
 
@@ -87,10 +87,12 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 
 **The principle.** VAD thresholds, noise cancellation, and turn-taking settings are not defaults you inherit. They depend on your users, languages, and the kind of conversation you're having. Tune them against real recordings, and keep those recordings as a test suite.
 
-**Why.** Three stories:
+**Why.** A few stories from production:
 
 - **Interviews are not chatbots.** Our agent kept interrupting candidates mid-sentence. The cause wasn't interruption handling - it was *endpointing*, the setting that decides when the user's turn is over. Ours was tuned for snappy chat (`max_delay=0.1s`). People answering interview questions pause mid-sentence for seconds while thinking. We now use `endpointing={"mode": "dynamic", "min_delay": 1.0, "max_delay": 6.0}`. The `max_delay` is the biggest lever.
-- **Noise cancellation and VAD are coupled.** The advanced noise-cancellation model (BVC) was deleting real candidate speech. We switched to the gentler model (NC) - and then background noise started reaching STT, which hallucinated words out of silence. As LiveKit told us: "we are oscillating between two failure modes." The fix was raising the VAD threshold to match the gentler NC. Changing one stage of the audio pipeline re-opens the tuning of its neighbors.
+- **Speaking styles vary more than you think.** The same setting bit us again across languages. Our defaults were tuned on fast speakers, and when Arabic-speaking candidates came onboard - who spoke more slowly, with longer pauses between phrases - the agent read every pause as "turn over" and kept cutting them off mid-sentence. Dynamic endpointing adjusts the end-of-turn delay to each speaker, and it worked for both groups without a per-language config.
+- **Not every sound is the user talking.** Background noise - someone talking nearby, traffic, a TV - used to register as speech and cut the agent off mid-sentence. Switching interruptions to `{"mode": "adaptive"}` classifies the audio before treating it as a barge-in, so noise no longer stops the agent while a real interruption still does.
+- **Noise cancellation and VAD are coupled.** The advanced noise-cancellation model (BVC) was deleting real candidate speech. We switched to the gentler model (NC) - and then background noise started reaching STT, which hallucinated words out of silence. As LiveKit told us: "we are oscillating between two failure modes." The fix was raising the VAD threshold to match the gentler NC. Changing one stage of the audio pipeline re-opens the tuning of its neighbors. And your users are not in studios: candidates take interviews from moving vehicles, from kitchens with a kid crying in the background. Those recordings are exactly the eval cases worth keeping, because they're where the VAD threshold and NC model choice actually get decided.
 - **Short words matter.** Single-syllable answers ("sí", ~0.25s) were never detected by our first VAD, stalling interviews at the consent question. That's a threshold problem you only find with real users.
 
 **How to apply it.** Collect every misbehaving recording as an eval case and re-run the suite whenever you touch a knob. When debugging audio, diff the egress recording (raw, before noise cancellation) against what the agent heard (after) - the difference is exactly what your NC removed. And treat silence as a signal to classify, not a timeout to fire on: no audio ever received means a mic problem, so say that; audio present means escalate gently (stay quiet, then "still there?", then a mic check). "Give me a moment" earns a longer grace period, and nudges are off entirely in coding sections, where silence is normal.
@@ -99,7 +101,7 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 
 **The principle.** Your agent process is an asyncio program supervised by a heartbeat. Any synchronous call in the pipeline can freeze the loop - and a frozen loop gets your process killed and the job re-dispatched.
 
-**Why.** The framework pings each job process every 2.5 seconds; about 60 seconds without a response and it kills the process as unresponsive. We traced one wave of mid-call agent deaths to a synchronous 33-second RAG call buried inside an async tool. Another came from a blocking call added to the entrypoint. From the candidate's side, both looked identical: the agent just vanished.
+**Why.** The framework pings each job process every 2.5 seconds; if it gets no response for about 60 seconds, it kills the process as unresponsive. We traced one wave of mid-call agent deaths to a synchronous 33-second RAG call buried inside an async tool. Another came from a blocking call added to the entrypoint. From the candidate's side, both looked identical: the agent just vanished.
 
 **How to apply it.** Every stage in your pipeline must be truly async - one sync call inside an `async def` still blocks the loop. Don't poll with `time.sleep` in streaming consumers; block on the queue and let the OS wake you. And attach an exception-logging done-callback to every fire-and-forget `asyncio.create_task` - unawaited task errors otherwise surface only when Python garbage-collects the task, which can be never. That one change turned an unreproducible bug into a log line.
 
@@ -107,15 +109,16 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 
 **The principle.** LiveKit Cloud (or any managed platform) is a distributed system with its own failure modes. Some "agent bugs" are platform events, and some are self-inflicted through configuration.
 
-**Why.** For months our top bug report was "the agent dropped mid-interview." It turned out to have at least eight different root causes, and misattributing one for another cost weeks each time. The most instructive ones:
+**Why.** For months our top bug report was "the agent dropped mid-interview." It turned out to have at least eight different root causes: deploy drains, a platform room-sweeper bug, node preemptions, a blocked event loop getting the process killed (principle 8), the avatar vendor dying mid-call (principle 5), dev workers stealing production jobs, our own boot-data API timing out, and the candidate's own network dropping. Misattributing one for another cost weeks each time. The most instructive ones:
 
 - **Deploy drains.** New deployments drain old workers for a default 30 minutes. Any interview longer than that at deploy time was killed mid-call - and logged as `USER_INITIATED`, which sent us hunting a frontend bug that didn't exist. We raised the drain period past our longest session (120 minutes) and deploy off-hours.
 - **Platform incidents.** A room-sweeper bug marked live rooms as ended, killing calls and truncating recordings. Node preemptions took out workers mid-job. These were LiveKit's bugs, honestly RCA'd - but from inside the agent they look exactly like your own crashes.
-- **Reactive scaling.** Warm capacity defaults to one instance; a new instance takes up to ~60 seconds to come online, driven mostly by container image size. For big events (we run drives of ~2,000 interviews/day), stagger session starts over 10–15 minutes and ask the platform to pre-warm capacity.
+- **Scale is a vendor-wide property.** Your peak concurrency has to clear every vendor in the chain: your own servers, LiveKit Cloud agent sessions, and each TTS and STT provider's concurrency caps. The lowest limit is your real capacity, so audit all of them before a big event. Autoscaling won't save you in real time either: warm capacity defaults to one instance, and a new instance takes up to ~60 seconds to come online, driven mostly by container image size. Before known high-volume hiring events (we run drives of ~2,000 interviews a day), we pre-warm agent instances in the region closest to the candidates, stagger session starts over 10-15 minutes, and check the autoscaler's latency and limits ahead of time instead of discovering them live.
 - **Dev workers steal prod jobs.** A laptop running `dev` mode with the same agent name competes for production dispatch. Different API keys do not isolate it. Use separate projects for dev and prod.
 - **Your own backend counts.** One "platform failure spike" was actually our boot-data API timing out. The agent can't greet anyone if its config fetch hangs - fetch boot data concurrently with connecting, and fail fast on missing fields.
+- **The candidate's network counts too.** Corporate VPNs and firewalls silently block WebRTC. Run a pre-check before the session starts - can the browser reach the TURN server, is UDP blocked - so connection problems surface before the interview begins, not two questions in.
 
-**How to apply it.** Keep drain > longest session, deploy off-hours, keep images lean, stagger bursts, isolate dev, and monitor your own dependencies as part of the agent's SLA.
+**How to apply it.** Keep the drain period longer than your longest session, deploy off-hours, keep images lean, pre-warm and stagger big events, isolate dev from prod, pre-check the user's connection, and monitor your own dependencies as part of the agent's SLA.
 
 ## 10. Measure everything, and attribute before you fix
 

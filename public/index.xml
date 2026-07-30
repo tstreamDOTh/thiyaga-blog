@@ -21,13 +21,6 @@
       <description>Ten hard-earned principles for keeping voice agents reliable in production on LiveKit.</description>
     </item>
     <item>
-      <title>Speculative Routing: An Architecture for Voice Agents</title>
-      <link>https://thiyaga.xyz/posts/speculative-routing/</link>
-      <pubDate>Wed, 29 Jul 2026 00:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/posts/speculative-routing/</guid>
-      <description>A production architecture for scaling voice agents beyond demos - to a million real conversations.</description>
-    </item>
-    <item>
       <title>Finding Structure in Time: Decoding the 1990 Paper</title>
       <link>https://thiyaga.xyz/posts/elman-paper/</link>
       <pubDate>Sun, 22 Feb 2026 10:30:00 +0530</pubDate>

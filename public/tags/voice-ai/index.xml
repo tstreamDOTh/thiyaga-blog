@@ -20,12 +20,5 @@
       <guid>https://thiyaga.xyz/posts/livekit-voice-agents/</guid>
       <description>Ten hard-earned principles for keeping voice agents reliable in production on LiveKit.</description>
     </item>
-    <item>
-      <title>Speculative Routing: An Architecture for Voice Agents</title>
-      <link>https://thiyaga.xyz/posts/speculative-routing/</link>
-      <pubDate>Wed, 29 Jul 2026 00:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/posts/speculative-routing/</guid>
-      <description>A production architecture for scaling voice agents beyond demos - to a million real conversations.</description>
-    </item>
   </channel>
 </rss>

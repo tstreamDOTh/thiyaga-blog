@@ -24,6 +24,8 @@ We run AI interview agents on LiveKit Cloud. An interview lasts up to an hour. A
 
 Over seven months of production incidents, we fixed dozens of reliability issues. Some were in our code, some in our configuration, some in how we used the platform. This post is what we learned, condensed into ten principles. For each one: what it means, why we believe it, and how to apply it.
 
+A note on format: the principles are written to be read without touching code. If you're building on LiveKit and want the exact APIs, settings, and error names behind each one, they're collected in the [code appendix](#appendix-livekit-code-references) at the end.
+
 ---
 
 ## 1. Assume your shutdown code will never run
@@ -46,11 +48,11 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 
 **Why.** Three ways we lost data on calls that ended normally:
 
-- We registered the shutdown callback *after* `session.start()` and the greeting. The greeting takes about 40 seconds. If the candidate left during it, the callback didn't exist yet, so nothing was saved.
+- We registered the shutdown callback *after* the session start and the greeting. The greeting takes about 40 seconds. If the candidate left during it, the callback didn't exist yet, so nothing was saved.
 - The default shutdown timeout is far too short once your cleanup does real work (stop egress, upload files, call webhooks). Our processes were killed mid-cleanup during deploys.
 - Our cleanup crashed on a JSON serialization error caused by a state object that was mutated by reference earlier in the call. Forty minutes of quiet corruption, detonating at the worst moment.
 
-**How to apply it.** Register `ctx.add_shutdown_callback(...)` **before** `session.start()`, even for resources that don't exist yet - declare `egress_id = None` and let the callback check it. Raise `WorkerOptions(shutdown_process_timeout=...)` to your worst case, not your average: we ended up at 20 minutes, reached in four steps (60s → 120s → 600s → 1200s), each one forced by a production incident. Run independent cleanup steps in parallel with `asyncio.gather`, and make your state store return copies on read so nothing can mutate stored state by accident. Finally, log three breadcrumbs - handler registered, invoked, completed - so a data-loss report tells you which failure mode you hit.
+**How to apply it.** Register the shutdown callback **before** starting the session, even for resources that don't exist yet - declare them empty and let the callback check before using them. Raise the worker's shutdown timeout to your worst case, not your average: we ended up at 20 minutes, reached in four steps, each one forced by a production incident. Run independent cleanup steps in parallel, and make your state store return copies on read so nothing can mutate stored state by accident. Finally, log three breadcrumbs - handler registered, invoked, completed - so a data-loss report tells you which failure mode you hit.
 
 ## 3. Make operations idempotent before you retry them
 
@@ -58,7 +60,7 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 
 **Why.** When our worker was respawned mid-call, the new process started a second recording of the same room. Both recordings wrote to the same file path, and the shorter one silently overwrote the longer one. A retry wrapped around that operation wouldn't have fixed anything - it would have caused the same bug more often.
 
-**How to apply it.** Before starting egress, call `list_egress(room_name=..., active=True)` and reuse a running recording instead of starting another - and put that check *inside* each retry attempt, so if attempt one succeeded on the server but the response got lost, attempt two finds it. Key every output path with a unique token (room ID or timestamp, not just the room name); during one platform incident a reconnect recreated a room with the same name and its recording clobbered the original. And when stopping egress, expect `failed_precondition` if the room closed first - catch it and fetch the final egress info anyway, because the recording start time lives there.
+**How to apply it.** Before starting a recording, ask the platform whether one is already running for the room and reuse it - and put that check *inside* each retry attempt, so if attempt one succeeded on the server but the response got lost, attempt two finds it. Key every output path with a unique token (room ID or timestamp, not just the room name); during one platform incident a reconnect recreated a room with the same name and its recording clobbered the original. And when stopping a recording, expect an "already finished" error if the room closed first - catch it and fetch the final recording info anyway, because the start time lives there.
 
 ## 4. Give every dependency a fallback - a lazy one
 
@@ -66,7 +68,7 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 
 **Why.** A single STT provider outage takes down every call. An LLM stream occasionally finishes without producing usable output - for us, that surfaced to candidates as a confusing "Sorry, I didn't catch that", and after enough repeats the interview was force-ended for "technical difficulties" the candidate didn't cause.
 
-**How to apply it.** Wrap STT in LiveKit's `FallbackAdapter` with a primary and backup chosen *per language* - the best English provider is not the best Spanish one, so the availability fallback doubles as a quality decision. For the LLM, build a fallback that is only created when the primary fails: same prompts, same schema, different model, zero cost on the happy path. If that fails too, play a short localized apology and count it against an "exception budget" that eventually ends the interview cleanly. Avatars get one retry, then we drop to plain voice - an optional feature should never block the interview. Keep default strings for everything spoken (`session.say()` should never receive empty text because a config field was missing), and count every fallback activation so you notice when plan B is quietly carrying your traffic.
+**How to apply it.** Wrap STT in a fallback adapter with a primary and backup chosen *per language* - the best English provider is not the best Spanish one, so the availability fallback doubles as a quality decision. For the LLM, build a fallback that is only created when the primary fails: same prompts, same schema, different model, zero cost on the happy path. If that fails too, play a short localized apology and count it against an "exception budget" that eventually ends the interview cleanly. Avatars get one retry, then we drop to plain voice - an optional feature should never block the interview. Keep default strings for everything spoken (the agent should never be handed empty text because a config field was missing), and count every fallback activation so you notice when plan B is quietly carrying your traffic.
 
 ## 5. Degrade, never go silent
 
@@ -76,7 +78,7 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 
 - A wrong "the interview is ending" classification set an irreversible flag that dropped every later turn. One candidate spoke 19 times over six minutes and was ignored. We deleted the flag - re-answering after a real goodbye is a small glitch; permanent silence after a wrong one is a disaster.
 - Our avatar vendor's worker died mid-call. Agent audio kept flowing to the dead avatar, so the candidate heard nothing. We now detect the avatar's disconnect, try one respawn, and otherwise swap the session's audio output back to a direct track so the voice continues without the face.
-- The framework started auto-resuming speech after false interruptions in a newer version. Our old workaround *also* regenerated the reply, so the agent spoke twice back to back. Check the event's `resumed` flag before reacting - and re-audit your workarounds on every SDK upgrade.
+- The framework started auto-resuming speech after false interruptions in a newer version. Our old workaround *also* regenerated the reply, so the agent spoke twice back to back. Check whether the framework already resumed before reacting - and re-audit your workarounds on every SDK upgrade.
 
 **How to apply it.** Avoid one-way latches in conversation state. Make every error path speak (apology, nudge, or fallback answer). And give yourself a way to trigger the failure on demand - we added a debug button that force-kills the avatar, because a recovery path you can't test is a recovery path that doesn't work.
 
@@ -86,7 +88,7 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 
 **Why.** In coding interviews, we flushed the candidate's code to S3 every 30 seconds. Sounds safe. But when a candidate moved to the next question, the frontend stopped sending updates for the old one. If the agent crashed just after the switch, the last few seconds of code on the old question were gone forever - and the automated evaluation graded stale code.
 
-**How to apply it.** Save on events, gated by a throttle interval - no background timers or threads. Add a `force_save()` that bypasses the throttle and call it at every point of no return: next question, section end, call end. Keep periodic saves as timestamped history and write the canonical finals only at graceful shutdown; if the process dies, the snapshots are enough to reconstruct everything. And watch the small contracts - our whiteboard recovery silently failed for weeks because the writer used float timestamps in file names and the reader expected ints. File-naming conventions between services are API contracts.
+**How to apply it.** Save on events, gated by a throttle interval - no background timers or threads. Add a force-save that bypasses the throttle and call it at every point of no return: next question, section end, call end. Keep periodic saves as timestamped history and write the canonical finals only at graceful shutdown; if the process dies, the snapshots are enough to reconstruct everything. And watch the small contracts - our whiteboard recovery silently failed for weeks because the writer used float timestamps in file names and the reader expected ints. File-naming conventions between services are API contracts.
 
 ## 7. Tune the voice pipeline for your conversation - and prove it with evals
 
@@ -94,9 +96,9 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 
 **Why.** A few stories from production:
 
-- **Interviews are not chatbots.** Our agent kept interrupting candidates mid-sentence. The cause wasn't interruption handling - it was *endpointing*, the setting that decides when the user's turn is over. Ours was tuned for snappy chat (`max_delay=0.1s`). People answering interview questions pause mid-sentence for seconds while thinking. We now use `endpointing={"mode": "dynamic", "min_delay": 1.0, "max_delay": 6.0}`. The `max_delay` is the biggest lever.
+- **Interviews are not chatbots.** Our agent kept interrupting candidates mid-sentence. The cause wasn't interruption handling - it was *endpointing*, the setting that decides when the user's turn is over. Ours was tuned for snappy chat, with a turn-end delay of a tenth of a second. People answering interview questions pause mid-sentence for seconds while thinking. We now run dynamic endpointing with a floor of one second and a ceiling of six - and that ceiling is the biggest lever.
 - **Speaking styles vary more than you think.** The same setting bit us again across languages. Our defaults were tuned on fast speakers, and when Arabic-speaking candidates came onboard - who spoke more slowly, with longer pauses between phrases - the agent read every pause as "turn over" and kept cutting them off mid-sentence. Dynamic endpointing adjusts the end-of-turn delay to each speaker, and it worked for both groups without a per-language config.
-- **Not every sound is the user talking.** Background noise - someone talking nearby, traffic, a TV - used to register as speech and cut the agent off mid-sentence. Switching interruptions to `{"mode": "adaptive"}` classifies the audio before treating it as a barge-in, so noise no longer stops the agent while a real interruption still does.
+- **Not every sound is the user talking.** Background noise - someone talking nearby, traffic, a TV - used to register as speech and cut the agent off mid-sentence. Switching interruption handling to adaptive mode classifies the audio before treating it as a barge-in, so noise no longer stops the agent while a real interruption still does.
 - **Noise cancellation and VAD are coupled.** The advanced noise-cancellation model (BVC) was deleting real candidate speech. We switched to the gentler model (NC) - and then background noise started reaching STT, which hallucinated words out of silence. As LiveKit told us: "we are oscillating between two failure modes." The fix was raising the VAD threshold to match the gentler NC. Changing one stage of the audio pipeline re-opens the tuning of its neighbors. And your users are not in studios: candidates take interviews from moving vehicles, from kitchens with a kid crying in the background. Those recordings are exactly the eval cases worth keeping, because they're where the VAD threshold and NC model choice actually get decided.
 - **Short words matter.** Single-syllable answers ("sí", ~0.25s) were never detected by our first VAD, stalling interviews at the consent question. That's a threshold problem you only find with real users.
 
@@ -108,7 +110,7 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 
 **Why.** The framework pings each job process every 2.5 seconds; if it gets no response for about 60 seconds, it kills the process as unresponsive. We traced one wave of mid-call agent deaths to a synchronous 33-second RAG call buried inside an async tool. Another came from a blocking call added to the entrypoint. From the candidate's side, both looked identical: the agent just vanished.
 
-**How to apply it.** Every stage in your pipeline must be truly async - one sync call inside an `async def` still blocks the loop. Don't poll with `time.sleep` in streaming consumers; block on the queue and let the OS wake you. And attach an exception-logging done-callback to every fire-and-forget `asyncio.create_task` - unawaited task errors otherwise surface only when Python garbage-collects the task, which can be never. That one change turned an unreproducible bug into a log line.
+**How to apply it.** Every stage in your pipeline must be truly async - one blocking call inside an async function still freezes the loop. Don't poll with sleeps in streaming consumers; block on the queue and let the OS wake you. And attach an exception-logging callback to every fire-and-forget task - unawaited task errors otherwise surface only at garbage collection, which can be never. That one change turned an unreproducible bug into a log line.
 
 ## 9. Know your platform's failure modes - and plan deploys around them
 
@@ -116,12 +118,12 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 
 **Why.** For months our top bug report was "the agent dropped mid-interview." It turned out to have at least eight different root causes: deploy drains, a platform room-sweeper bug, node preemptions, a blocked event loop getting the process killed (principle 8), the avatar vendor dying mid-call (principle 5), dev workers stealing production jobs, our own boot-data API timing out, and the candidate's own network dropping. Misattributing one for another cost weeks each time. The most instructive ones:
 
-- **Deploy drains.** New deployments drain old workers for a default 30 minutes. Any interview longer than that at deploy time was killed mid-call - and logged as `USER_INITIATED`, which sent us hunting a frontend bug that didn't exist. We raised the drain period past our longest session (120 minutes) and deploy off-hours.
+- **Deploy drains.** New deployments drain old workers for a default 30 minutes. Any interview longer than that at deploy time was killed mid-call - and logged as a user-initiated disconnect, which sent us hunting a frontend bug that didn't exist. We raised the drain period past our longest session (120 minutes) and deploy off-hours.
 - **Platform incidents.** A room-sweeper bug marked live rooms as ended, killing calls and truncating recordings. Node preemptions took out workers mid-job. These were LiveKit's bugs, honestly RCA'd - but from inside the agent they look exactly like your own crashes.
 - **Scale is a vendor-wide property.** Your peak concurrency has to clear every vendor in the chain: your own servers, LiveKit Cloud agent sessions, and each TTS and STT provider's concurrency caps. The lowest limit is your real capacity, so audit all of them before a big event. Autoscaling won't save you in real time either: warm capacity defaults to one instance, and a new instance takes up to ~60 seconds to come online, driven mostly by container image size. Before known high-volume hiring events (we run drives of ~2,000 interviews a day), we pre-warm agent instances in the region closest to the candidates, stagger session starts over 10-15 minutes, and check the autoscaler's latency and limits ahead of time instead of discovering them live.
-- **Dev workers steal prod jobs.** A laptop running `dev` mode with the same agent name competes for production dispatch. Different API keys do not isolate it. Use separate projects for dev and prod.
+- **Dev workers steal prod jobs.** A laptop running in dev mode with the same agent name competes for production dispatch. Different API keys do not isolate it. Use separate projects for dev and prod.
 - **Your own backend counts.** One "platform failure spike" was actually our boot-data API timing out. The agent can't greet anyone if its config fetch hangs - fetch boot data concurrently with connecting, and fail fast on missing fields.
-- **The candidate's network - and devices - count too.** Corporate VPNs and firewalls can silently block the UDP/TURN transport that WebRTC relies on, and microphone or camera issues often don't appear until the agent asks the first question. To prevent this, we run a real WebRTC dry run over the exact path the interview will use before the session begins. The client connects to the LiveKit server, publishes live microphone and camera tracks, streams for a few seconds, and verifies via `getStats()` that media packets are actually leaving the device. That packet count is the key signal: if a firewall is blocking media, no packets are transmitted, allowing us to detect the issue immediately. Since the probe publishes real media tracks, the same process also validates microphone and camera functionality. As a result, connection and device issues are surfaced on the setup screen with a clear retry option instead of interrupting the interview after it has already started.
+- **The candidate's network - and devices - count too.** Corporate VPNs and firewalls can silently block the transport WebRTC relies on, and microphone or camera issues often don't appear until the agent asks the first question. To prevent this, we run a real WebRTC dry run over the exact path the interview will use before the session begins. The client connects to the media server, publishes live microphone and camera tracks, streams for a few seconds, and verifies from the connection stats that media packets are actually leaving the device. That packet count is the key signal: if a firewall is blocking media, no packets are transmitted, and we detect it immediately. Since the probe publishes real media tracks, the same process also validates the microphone and camera. Connection and device issues surface on the setup screen with a clear retry option instead of interrupting the interview after it has started.
 
 **How to apply it.** Keep the drain period longer than your longest session, deploy off-hours, keep images lean, pre-warm and stagger big events, isolate dev from prod, pre-check the user's connection, and monitor your own dependencies as part of the agent's SLA.
 
@@ -138,6 +140,26 @@ One thing we got wrong at first: we shipped the *saving* side and forgot the *lo
 ## Closing
 
 None of this is exotic. It's ordinary distributed-systems discipline (durability, idempotency, fallbacks, observability) applied to a medium with an unusual failure mode. When a web service fails, the user sees an error page. When a voice agent fails, a human sits in silence, wondering if anyone is there. Build for that.
+
+---
+
+## Appendix: LiveKit code references
+
+The concrete APIs, settings, and error names behind the principles, for readers implementing this on LiveKit.
+
+**Principle 2 - shutdown.** Register `ctx.add_shutdown_callback(...)` before `session.start()`. For resources created later, declare `egress_id = None` up front and check `if egress_id:` inside the callback. Raise `WorkerOptions(shutdown_process_timeout=...)` - ours grew 60s → 120s → 600s → 1200s. Parallelize independent cleanup steps with `asyncio.gather`.
+
+**Principle 3 - idempotent recording.** Call `list_egress(room_name=..., active=True)` before starting egress and reuse a running one, inside every retry attempt. `stop_egress` on a finished egress throws `failed_precondition`; catch it and fetch the final egress info anyway - the reliable recording start time is in `file_results[0].started_at` (nanoseconds).
+
+**Principle 4 - fallbacks.** Wrap STT providers in LiveKit's `FallbackAdapter`. Guard `session.say()` so it never receives an empty string.
+
+**Principle 5 - false interruptions.** On agents framework ≥1.5, false interruptions auto-resume - check the event's `resumed` flag before regenerating a reply, or the agent speaks twice.
+
+**Principle 7 - turn-taking and audio.** Endpointing: `endpointing={"mode": "dynamic", "min_delay": 1.0, "max_delay": 6.0}` - `max_delay` is the biggest lever. Interruptions: `interruption={"mode": "adaptive"}` classifies audio before treating it as barge-in. Noise cancellation: BVC is the aggressive model, NC the gentler one - switching between them requires retuning the VAD threshold, and the egress recording is pre-NC audio while the agent hears post-NC, so diff them when debugging.
+
+**Principle 8 - event loop.** The supervisor pings each job process every 2.5s and kills it after ~60s without a response. No sync calls inside `async def`; block on `queue.get(timeout=...)` instead of polling with `time.sleep`. Attach exception-logging done-callbacks to every `asyncio.create_task`.
+
+**Principle 9 - platform.** Deploy drains default to 30 minutes and log the kill as `USER_INITIATED`. Workers started with `dev` mode and the same agent name compete for production dispatch even with different API keys - isolate by project. For the connection pre-check, publish real microphone and camera tracks and verify via `getStats()` that outbound media packet counts are increasing.
 
 ---
 

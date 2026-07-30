@@ -18,7 +18,7 @@
 				<link>https://thiyaga.xyz/posts/livekit-voice-agents/</link>
 				<pubDate>Wed, 29 Jul 2026 00:45:00 +0530</pubDate>
 				<guid>https://thiyaga.xyz/posts/livekit-voice-agents/</guid>
-				<description>&lt;p&gt;Voice agent demos are easy to build. A LiveKit worker, an STT → LLM → TTS pipeline, and you have something that talks. The hard part is making it reliable.&lt;/p&gt;&#xA;&lt;p&gt;We run AI interview agents on LiveKit Cloud. An interview lasts up to an hour. A lost recording is a compliance problem. A lost transcript means the candidate has to redo the interview. A silent agent means a human sitting in an empty room, wondering if anyone is there.&lt;/p&gt;</description>
+				<description>&lt;p&gt;Voice agent demos are easy to build. A LiveKit worker, an STT → LLM → TTS pipeline, and you have something that talks. The hard part is making it reliable.&lt;/p&gt;&#xA;&lt;p&gt;We run AI call agents on LiveKit. An call lasts up to an hour. A lost recording is a compliance problem. A lost transcript means the user has to redo the call. A silent agent means a human sitting in an empty room, wondering if anyone is there.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>

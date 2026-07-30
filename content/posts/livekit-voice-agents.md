@@ -4,6 +4,11 @@ date: 2026-07-29T00:45:00+05:30
 draft: false
 tags: ["AI", "Voice AI", "LiveKit", "Reliability", "Engineering", "Agentic AI"]
 categories: ["AI Engineering"]
+coauthors:
+  - name: Kushagra Sahni
+    url: https://www.linkedin.com/in/kushagra-sahni-171758201/
+  - name: Vishal Shetty
+    url: https://www.linkedin.com/in/vishal-shetty27/
 cover:
   image: "/images/livekit-principles-banner.png"
   alt: "A voice waveform of bars where one bar is hollow - the wave keeps going"

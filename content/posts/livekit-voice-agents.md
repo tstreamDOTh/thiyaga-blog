@@ -9,6 +9,10 @@ coauthors:
     url: https://www.linkedin.com/in/kushagra-sahni-171758201/
   - name: Vishal Shetty
     url: https://www.linkedin.com/in/vishal-shetty27/
+  - name: Harshil Sethi
+    url: https://www.linkedin.com/in/harshil-sethi-aa983221b/
+  - name: Dibyashakti Moharana
+    url: https://www.linkedin.com/in/dibyashakti-moharana/
 cover:
   image: "/images/livekit-principles-banner.png"
   alt: "A voice waveform of bars where one bar is hollow - the wave keeps going"

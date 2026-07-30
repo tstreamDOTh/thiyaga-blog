@@ -2,7 +2,7 @@
 title: "Speculative Routing: An Architecture for Voice Agents"
 date: 2026-07-29T00:30:00+05:30
 draft: false
-_build:
+build:
   render: always
   list: never
 tags: ["AI", "Voice AI", "Agentic AI", "Architecture", "LLM", "Engineering"]

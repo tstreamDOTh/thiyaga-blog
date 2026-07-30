@@ -22,7 +22,7 @@ Voice agent demos are easy to build. A LiveKit worker, an STT → LLM → TTS pi
 
 We run AI interview agents on LiveKit Cloud. An interview lasts up to an hour. A lost recording is a compliance problem. A lost transcript means the candidate has to redo the interview. A silent agent means a human sitting in an empty room, wondering if anyone is there.
 
-Over seven months of production incidents, we fixed dozens of reliability issues. Some were in our code, some in our configuration, some in how we used the platform. This post is what we learned, condensed into ten principles. For each one: what it means, why we believe it, and how to apply it.
+Over seven months of observing production traffic and incidents, we fixed dozens of reliability issues. Some were in our code, some in our configuration, some in how we used the platform. This post is what we learned, condensed into ten principles. For each one: what it means, why we believe it, and how to apply it.
 
 A note on format: the principles are written to be read without touching code. If you're building on LiveKit and want the exact APIs, settings, and error names behind each one, they're collected in the [code appendix](#appendix-livekit-code-references) at the end.
 

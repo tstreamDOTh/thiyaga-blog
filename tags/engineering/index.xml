@@ -21,13 +21,6 @@
 				<description>&lt;p&gt;Voice agent demos are easy to build. A LiveKit worker, an STT → LLM → TTS pipeline, and you have something that talks. The hard part is making it reliable.&lt;/p&gt;&#xA;&lt;p&gt;We run AI interview agents on LiveKit Cloud. An interview lasts up to an hour. A lost recording is a compliance problem. A lost transcript means the candidate has to redo the interview. A silent agent means a human sitting in an empty room, wondering if anyone is there.&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>Speculative Routing: An Architecture for Voice Agents</title>
-				<link>https://thiyaga.xyz/posts/speculative-routing/</link>
-				<pubDate>Wed, 29 Jul 2026 00:30:00 +0530</pubDate>
-				<guid>https://thiyaga.xyz/posts/speculative-routing/</guid>
-				<description>&lt;p&gt;&lt;em&gt;Voice agents are easy to demo and hard to scale. The architecture we ended up with fires every possible response in parallel and lets a fast router pick the winner mid-flight. This post walks through everything we tried before it, and why this design is the one we kept.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-problem-nobodys-demo-solves&#34;&gt;The problem nobody&amp;rsquo;s demo solves&lt;/h2&gt;&#xA;&lt;p&gt;Every voice agent demo looks the same: clean audio, a cooperative user, a short scripted exchange. Then you ship it, and two things break immediately.&lt;/p&gt;</description>
-			</item>
-			<item>
 				<title>The 90/10 Rule: The Inconvenient Truth About Agentic AI - It’s All Plumbing, No Brain</title>
 				<link>https://thiyaga.xyz/posts/the-9010-rule-agentic-ai/</link>
 				<pubDate>Wed, 10 Sep 2025 10:30:00 +0530</pubDate>

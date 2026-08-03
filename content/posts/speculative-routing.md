@@ -261,3 +261,5 @@ The spectrum makes it look like more autonomy means more capability. For real-ti
 ---
 
 *Kudos to the team at Eightfold - the engineers who built, tested, and explored different architectures for an AI interviewer that scaled to a million interviews, learning and evolving at every step without losing momentum. Each iteration taught us a lesson that made it into this post. And this is just one of the hundreds of problems we've solved to get there.*
+
+*More on speculative routing coming soon - how to manage state, checkpointers, and more, in detail.*

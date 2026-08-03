@@ -1,12 +1,14 @@
 ---
 title: "Speculative Routing: An Architecture for Voice Agents"
-date: 2026-07-29T00:30:00+05:30
+date: 2026-08-03T00:30:00+05:30
 draft: false
-build:
-  render: always
-  list: never
 tags: ["AI", "Voice AI", "Agentic AI", "Architecture", "LLM", "Engineering"]
 categories: ["AI Engineering"]
+coauthors:
+  - name: Adarsh Shah
+    url: https://www.linkedin.com/in/adarsh-shah-04ab3453/
+  - name: Ayush Singh
+    url: https://www.linkedin.com/in/ayush-singh-a2b03a1b8/
 cover:
   image: "/images/speculative-routing-banner.png"
   alt: "Three parallel streams racing toward a router - one wins and continues"

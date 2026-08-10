@@ -78,8 +78,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Notes from the ground — building agentic AI at scale"
-    Content: "I’m Thiyagaraj, Director of Engineering on the Agentic Platform team at Eightfold AI. This is where I write down what production teaches us: voice agents that scaled to a million interviews, LLM budgets across billions of tokens, and the architecture decisions in between."
+    Title: "Notes from shipping agentic AI at scale"
+    Content: "I’m Thiyagaraj, Director of Engineering on the Agentic Platform team at Eightfold AI. This is where I write down what production teaches us: voice agents that scaled to a million interviews, and the architecture decisions behind them."
 
   socialIcons:
     - name: github

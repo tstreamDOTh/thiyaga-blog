@@ -18,7 +18,7 @@ params:
   footerText: ""
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Thiyagaraj T
-  description: "Notes from the ground by Thiyagaraj T, Director of Engineering, Agentic Platform at Eightfold AI - on building and scaling production agentic AI systems."
+  description: "Notes from the ground on shipping agentic AI at scale. Thiyagaraj leads the Agentic Platform team at Eightfold AI as Director of Engineering - this is what production teaches."
   keywords: ["AI", "Agentic AI", "Software Engineering", "Machine Learning", "Voice AI", "Eightfold AI"]
   author: Thiyagaraj T
   # author: ["Me", "You"] # multiple authors

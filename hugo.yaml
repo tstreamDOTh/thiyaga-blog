@@ -18,7 +18,7 @@ params:
   footerText: ""
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Thiyagaraj T
-  description: "Building Agentic AI that solves real problems at Eightfold AI. Sharing insights on AI engineering, software development, and the reality of building production AI systems."
+  description: "Notes from the ground by Thiyagaraj T, Director of Engineering, Agentic Platform at Eightfold AI - on building and scaling production agentic AI systems."
   keywords: ["AI", "Agentic AI", "Software Engineering", "Machine Learning", "Voice AI", "Eightfold AI"]
   author: Thiyagaraj T
   # author: ["Me", "You"] # multiple authors
@@ -65,7 +65,7 @@ params:
   profileMode:
     enabled: false # needs to be explicitly set
     title: Thiyagaraj T
-    subtitle: "AI Engineer | Building Agentic Systems"
+    subtitle: "Director of Engineering, Agentic Platform @ Eightfold AI"
     imageUrl: "<img location>"
     imageWidth: 120
     imageHeight: 120
@@ -78,8 +78,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi, I’m thiyaga 👋 — From Pixels to Agents"
-    Content: "Engineer. Builder. Dreamer. I’ve gone from crafting consumer products, design systems, and web based design editors at Pixels to now shaping agentic AI at Eightfold AI."
+    Title: "Notes from the ground — building agentic AI at scale"
+    Content: "I’m Thiyagaraj, Director of Engineering on the Agentic Platform team at Eightfold AI. This is where I write down what production teaches us: voice agents that scaled to a million interviews, LLM budgets across billions of tokens, and the architecture decisions in between."
 
   socialIcons:
     - name: github

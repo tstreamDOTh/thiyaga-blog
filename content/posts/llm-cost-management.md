@@ -61,4 +61,4 @@ Every call gets logged with its name and token counts. Cost per caller ID feeds 
 
 The teams here don't experience this as bureaucracy, and I think that's the trick. The expensive thing (tokens) is gated by a cheap thing (a Slack message with an estimate). Asking costs you ten minutes. And writing the estimate forces you to understand your own feature's economics before you ship it, which every team should want anyway.
 
-That plaque in our CTO's office says 10 billion tokens. The reason it can keep counting up is that every single one of them has a name on it.
+That plaque at our office says 10 billion tokens. The reason it can keep counting up is that every single one of them has a name on it.

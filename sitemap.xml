@@ -2,37 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://thiyaga.xyz/tags/agentic-ai/</loc>
-    <lastmod>2026-08-03T00:30:00+05:30</lastmod>
-  </url><url>
     <loc>https://thiyaga.xyz/tags/ai/</loc>
-    <lastmod>2026-08-03T00:30:00+05:30</lastmod>
+    <lastmod>2026-08-10T00:30:00+05:30</lastmod>
   </url><url>
     <loc>https://thiyaga.xyz/categories/ai-engineering/</loc>
+    <lastmod>2026-08-10T00:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/ai-engineering/</loc>
+    <lastmod>2026-08-10T00:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/</loc>
+    <lastmod>2026-08-10T00:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/categories/</loc>
+    <lastmod>2026-08-10T00:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/cost-management/</loc>
+    <lastmod>2026-08-10T00:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/engineering/</loc>
+    <lastmod>2026-08-10T00:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/llm/</loc>
+    <lastmod>2026-08-10T00:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/platform/</loc>
+    <lastmod>2026-08-10T00:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/posts/</loc>
+    <lastmod>2026-08-10T00:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/</loc>
+    <lastmod>2026-08-10T00:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://thiyaga.xyz/tags/agentic-ai/</loc>
     <lastmod>2026-08-03T00:30:00+05:30</lastmod>
   </url><url>
     <loc>https://thiyaga.xyz/tags/architecture/</loc>
     <lastmod>2026-08-03T00:30:00+05:30</lastmod>
   </url><url>
-    <loc>https://thiyaga.xyz/</loc>
-    <lastmod>2026-08-03T00:30:00+05:30</lastmod>
-  </url><url>
-    <loc>https://thiyaga.xyz/categories/</loc>
-    <lastmod>2026-08-03T00:30:00+05:30</lastmod>
-  </url><url>
-    <loc>https://thiyaga.xyz/tags/engineering/</loc>
-    <lastmod>2026-08-03T00:30:00+05:30</lastmod>
-  </url><url>
-    <loc>https://thiyaga.xyz/tags/llm/</loc>
-    <lastmod>2026-08-03T00:30:00+05:30</lastmod>
-  </url><url>
-    <loc>https://thiyaga.xyz/posts/</loc>
-    <lastmod>2026-08-03T00:30:00+05:30</lastmod>
-  </url><url>
     <loc>https://thiyaga.xyz/posts/speculative-routing/</loc>
-    <lastmod>2026-08-03T00:30:00+05:30</lastmod>
-  </url><url>
-    <loc>https://thiyaga.xyz/tags/</loc>
     <lastmod>2026-08-03T00:30:00+05:30</lastmod>
   </url><url>
     <loc>https://thiyaga.xyz/tags/voice-ai/</loc>

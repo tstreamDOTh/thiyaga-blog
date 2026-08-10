@@ -8,7 +8,7 @@ cover:
   image: "/images/fast-slow-banner.png"
   alt: "Fast AI vs Slow AI"
   caption: "The Choice That Makes or Breaks Teams"
-description: ""
+description: "Fast AI and Slow AI demand completely different mindsets - a lens from Ritendra Datta, VP of AI at Eightfold, on why very few teams can do both well."
 showToc: false
 TocOpen: false
 ---

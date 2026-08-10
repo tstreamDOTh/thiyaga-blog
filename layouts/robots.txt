@@ -29,6 +29,6 @@ Disallow:
 User-agent: CCBot
 Disallow:
 
-# LLM-friendly site overview: https://thiyaga.xyz/llms.txt
+# LLM-friendly site overview: {{ "llms.txt" | absURL }}
 
-Sitemap: https://thiyaga.xyz/sitemap.xml
+Sitemap: {{ "sitemap.xml" | absURL }}

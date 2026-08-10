@@ -8,7 +8,7 @@ cover:
   image: "/images/9010-banner.png"
   alt: "Agentic AI Plumbing"
   caption: "The 90/10 Rule: Building Agentic AI Systems"
-description: ""
+description: "90% of building agentic AI is software engineering and only 10% is the model - hard-learned lessons from building AI interview systems at Eightfold."
 showToc: false
 TocOpen: false
 ---

@@ -2,9 +2,6 @@
 title: "How We Manage LLM Costs Across Billions of Tokens"
 date: 2026-08-10T00:30:00+05:30
 draft: false
-build:
-  render: always
-  list: never
 tags: ["AI", "LLM", "Cost Management", "Engineering", "Platform", "AI Engineering"]
 categories: ["AI Engineering"]
 cover:

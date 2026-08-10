@@ -17,7 +17,7 @@ TocOpen: false
 
 ---
 
-Our CTO has one of the cooler awards you'll see in an office: a plaque from OpenAI for crossing 10 billion tokens.
+Our CTO has one of the cooler awards you'll see in an office: a plaque from OpenAI for crossing 10 billion tokens. I first saw it a year back, visiting our Santa Clara office.
 
 I love that plaque. It also mildly terrifies me. Ten billion tokens is not a milestone you hit by accident. It means AI is wired into everything we ship, and every one of those tokens was paid for. When you burn tokens at that scale, managing the budget well isn't a finance chore. It's the thing that decides whether you get to keep building.
 

@@ -1,0 +1,25 @@
+# Field notes: agentic AI at scale - by Thiyagaraj T
+
+> Blog by Thiyagaraj T, Director of Engineering on the Agentic Platform team at Eightfold AI. First-hand engineering write-ups on building and scaling production agentic AI systems: voice agents that scaled to a million interactions, LLM cost management across billions of tokens, and the architecture decisions behind them.
+
+Site: https://thiyaga.xyz/
+
+## Posts
+
+- [How We Manage LLM Costs Across Billions of Tokens](https://thiyaga.xyz/posts/llm-cost-management/): The system for keeping LLM spend visible and owned across dozens of teams - caller IDs on every call, Slack-message approvals, runtime throttling, per-team key isolation, and per-feature cost monitoring.
+- [Speculative Routing: An Architecture for Voice Agents](https://thiyaga.xyz/posts/speculative-routing/): A production architecture for real-time voice agents - fire every possible response in parallel and let a fast router pick the winner mid-flight. Covers nine architectures tried on the way and five distilled principles.
+- [10 Principles for Building Reliable Voice Agents on LiveKit](https://thiyaga.xyz/posts/livekit-voice-agents/): Ten hard-earned principles for keeping voice agents reliable in production on LiveKit.
+- [Finding Structure in Time: Decoding the 1990 Paper](https://thiyaga.xyz/posts/elman-paper/): How Jeffrey Elman's tiny recurrent network discovered linguistic structure just by predicting the next word, and why that idea underpins today's LLMs.
+- [Fast AI or Slow AI: The Choice That Makes or Breaks Teams](https://thiyaga.xyz/posts/fast-ai-or-slow-ai/): Fast AI and Slow AI demand completely different mindsets - a lens from Ritendra Datta, VP of AI at Eightfold, on why very few teams can do both well.
+- [The 90/10 Rule: The Inconvenient Truth About Agentic AI](https://thiyaga.xyz/posts/the-9010-rule-agentic-ai/): 90% of building agentic AI is software engineering and only 10% is the model - lessons from building AI interview systems at Eightfold.
+
+## Feeds
+
+- [RSS feed](https://thiyaga.xyz/index.xml): full feed of all posts
+- [Sitemap](https://thiyaga.xyz/sitemap.xml)
+
+## Author
+
+- [LinkedIn](https://linkedin.com/in/thiyagarajt)
+- [GitHub](https://github.com/tstreamDOTh)
+- [X](https://x.com/thewizardjs)

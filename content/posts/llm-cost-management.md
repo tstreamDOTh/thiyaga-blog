@@ -43,7 +43,7 @@ No LLM call leaves our platform without a registered caller ID. The client libra
 
 ## Approve new AI features with a Slack message, not a committee
 
-To get a caller ID, you post in an approval channel: what you're building, which model, estimated cost per call and per month. A few platform owners read it and reply. Most requests get approved the same day. But they read carefully. I watched one recent estimate get pushed back on and corrected from about $1,100 down to $400, because the requester had priced everything at flagship rates when half their models were cheaper. The review made the estimate better, not slower.
+To get a caller ID, you post in an approval channel: what you're building, which model, estimated cost per call and per month. A few platform owners read it and reply. Most requests get approved the same day. But they read carefully. I watched one recent estimate get pushed back on and corrected from about $2,000 down to $400, because the requester had priced everything at flagship rates when half their models were cheaper. The review made the estimate better, not slower.
 
 ## Throttle token usage at runtime
 

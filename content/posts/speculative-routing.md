@@ -263,3 +263,11 @@ The spectrum makes it look like more autonomy means more capability. For real-ti
 *Kudos to the team at Eightfold - the engineers who built, tested, and explored different architectures for an AI interviewer that scaled to a million interviews, learning and evolving at every step without losing momentum. Each iteration taught us a lesson that made it into this post. And this is just one of the hundreds of problems we've solved to get there.*
 
 *More on speculative routing coming soon - how to manage state, checkpointers, and more, in detail.*
+
+## References
+
+- Harrison Chase, [What is a cognitive architecture?](https://blog.langchain.dev/what-is-a-cognitive-architecture/) - LangChain Blog
+- Yao et al., [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) - the reason/act/observe loop discussed in architecture #7
+- Stivers et al., [Universals and cultural variation in turn-taking in conversation](https://www.pnas.org/doi/10.1073/pnas.0903616106) - PNAS research on how quickly humans expect conversational responses
+- [Pipecat](https://github.com/pipecat-ai/pipecat) - the open-source conversation-workflow family we built on in architecture #6
+- [LangGraph](https://www.langchain.com/langgraph) - the agent framework behind the ReAct experiment

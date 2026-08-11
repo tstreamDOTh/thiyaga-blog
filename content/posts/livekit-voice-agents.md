@@ -166,3 +166,9 @@ The concrete APIs, settings, and error names behind the principles, for readers 
 ---
 
 *Kudos to the team at Eightfold - the engineers who debugged every one of these incidents, often live with a user on the line, and turned each one into a fix, a metric, or a principle in this post. Seven months of production hardening is a team sport.*
+
+## References
+
+- [LiveKit Agents documentation](https://docs.livekit.io/agents/) - the framework these principles apply to
+- [LiveKit Agents on GitHub](https://github.com/livekit/agents) - source for the worker, job, and session lifecycle discussed throughout
+- [LiveKit WebRTC docs](https://docs.livekit.io/home/) - rooms, tracks, and connection internals behind principles 8 and 9

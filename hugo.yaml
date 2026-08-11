@@ -1,6 +1,6 @@
 title: Blog by Thiyagaraj T
 pagination:
-  pagerSize: 5
+  pagerSize: 10
 theme: PaperMod
 
 baseURL: "https://thiyaga.xyz/"

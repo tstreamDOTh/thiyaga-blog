@@ -29,7 +29,7 @@ That gap is the real problem with LLM costs. It's not that they're high. It's th
 
 ## Why LLM cost management gets hard at scale
 
-At a small startup, one person can hold the whole AI bill in their head. At our scale, we can't. We run AI interviews, document parsing, translations, recruiter copilots, career agents. Dozens of teams, each making LLM calls, each with a good reason.
+At a small startup, one person can hold the whole AI bill in their head. At our scale, we can't. We run AI interviews, document parsing, translations, copilots, agents. Dozens of teams, each making LLM calls, each with a good reason.
 
 The two obvious answers are both wrong.
 

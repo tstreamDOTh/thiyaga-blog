@@ -63,6 +63,10 @@ The teams here don't experience this as bureaucracy, and I think that's the tric
 
 That plaque at our office says 10 billion tokens. The reason it can keep counting up is that every single one of them has a name on it.
 
+---
+
+*Update: my inputs on how we govern AI spend were featured in Inc42's piece [Enterprise AI Spend Gets a Reality Check](https://inc42.com/features/enterprise-ai-spend-gets-a-reality-check/) (Aug 2026).*
+
 ## References
 
 - [OpenAI API pricing](https://openai.com/api/pricing/) and [Anthropic pricing](https://www.anthropic.com/pricing) - per-token rates vary widely across model tiers, which is exactly how estimates drift

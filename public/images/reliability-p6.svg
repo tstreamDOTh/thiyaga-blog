@@ -13,7 +13,8 @@
     <line x1="710" y1="160" x2="710" y2="200"/>
     <line x1="790" y1="160" x2="790" y2="200"/>
   </g>
-  <text x="150" y="140" font-size="13" fill="#8f86c9" font-weight="600">throttled saves, at most every 30 s</text>
+  <text x="80" y="140" font-size="13" fill="#8f86c9" font-weight="600">throttled saves,</text>
+  <text x="80" y="158" font-size="13" fill="#8f86c9" font-weight="600">at most every 30 s</text>
 
   <!-- force-save flags -->
   <g>

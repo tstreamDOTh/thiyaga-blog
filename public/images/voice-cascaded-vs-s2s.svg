@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="cArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a5566"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="620" fill="#faf7f2"/>
+  <text x="600" y="48" text-anchor="middle" font-size="24" font-weight="600" fill="#3d3a4a">Two ways to build the middle</text>
+
+  <!-- Divider -->
+  <line x1="600" y1="80" x2="600" y2="560" stroke="#3d3a4a" stroke-opacity="0.12" stroke-width="1.5" stroke-dasharray="5 5"/>
+
+  <!-- Left: Cascaded -->
+  <text x="310" y="106" text-anchor="middle" font-size="19" font-weight="600" fill="#3d3a4a">Cascaded pipeline</text>
+
+  <rect x="60" y="150" width="120" height="70" rx="12" fill="#dce8df" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="120" y="192" text-anchor="middle" font-size="15" fill="#3d3a4a">audio in</text>
+
+  <rect x="230" y="150" width="110" height="70" rx="12" fill="#d6e4f0" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="285" y="192" text-anchor="middle" font-size="16" font-weight="600" fill="#3d3a4a">STT</text>
+
+  <rect x="390" y="150" width="110" height="70" rx="12" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="445" y="192" text-anchor="middle" font-size="16" font-weight="600" fill="#3d3a4a">LLM</text>
+
+  <rect x="230" y="270" width="110" height="70" rx="12" fill="#f9dcc4" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="285" y="312" text-anchor="middle" font-size="16" font-weight="600" fill="#3d3a4a">TTS</text>
+
+  <rect x="60" y="270" width="120" height="70" rx="12" fill="#dce8df" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="120" y="312" text-anchor="middle" font-size="15" fill="#3d3a4a">audio out</text>
+
+  <line x1="180" y1="185" x2="228" y2="185" stroke="#5a5566" stroke-width="2" marker-end="url(#cArrow)"/>
+  <line x1="340" y1="185" x2="388" y2="185" stroke="#5a5566" stroke-width="2" marker-end="url(#cArrow)"/>
+  <text x="364" y="172" text-anchor="middle" font-size="12" fill="#8a8494">text</text>
+  <path d="M 445 222 C 445 290, 400 305, 342 305" fill="none" stroke="#5a5566" stroke-width="2" marker-end="url(#cArrow)"/>
+  <text x="420" y="280" font-size="12" fill="#8a8494">text</text>
+  <line x1="228" y1="305" x2="182" y2="305" stroke="#5a5566" stroke-width="2" marker-end="url(#cArrow)"/>
+
+  <text x="70" y="400" font-size="15" font-weight="600" fill="#3d3a4a">You get</text>
+  <text x="70" y="428" font-size="14" fill="#6b6577">&#8226; text at every seam: log it, redact it, eval it</text>
+  <text x="70" y="452" font-size="14" fill="#6b6577">&#8226; swap any stage or vendor independently</text>
+  <text x="70" y="476" font-size="14" fill="#6b6577">&#8226; mature tool calling, per-stage fallbacks</text>
+  <text x="70" y="500" font-size="14" fill="#6b6577">&#8226; pick the best STT and TTS per language</text>
+  <text x="70" y="536" font-size="15" font-weight="600" fill="#c96b62">You pay</text>
+  <text x="150" y="536" font-size="14" fill="#6b6577">latency adds up; tone and emotion lost at the STT seam</text>
+
+  <!-- Right: Speech-to-speech -->
+  <text x="890" y="106" text-anchor="middle" font-size="19" font-weight="600" fill="#3d3a4a">Speech-to-speech model</text>
+
+  <rect x="660" y="150" width="120" height="70" rx="12" fill="#dce8df" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="720" y="192" text-anchor="middle" font-size="15" fill="#3d3a4a">audio in</text>
+
+  <rect x="830" y="140" width="230" height="210" rx="16" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.3"/>
+  <text x="945" y="235" text-anchor="middle" font-size="17" font-weight="600" fill="#3d3a4a">One realtime model</text>
+  <text x="945" y="262" text-anchor="middle" font-size="13" fill="#6b6577">hears audio, speaks audio</text>
+
+  <rect x="660" y="270" width="120" height="70" rx="12" fill="#dce8df" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="720" y="312" text-anchor="middle" font-size="15" fill="#3d3a4a">audio out</text>
+
+  <line x1="780" y1="185" x2="828" y2="185" stroke="#5a5566" stroke-width="2" marker-end="url(#cArrow)"/>
+  <line x1="828" y1="305" x2="782" y2="305" stroke="#5a5566" stroke-width="2" marker-end="url(#cArrow)"/>
+
+  <text x="660" y="400" font-size="15" font-weight="600" fill="#3d3a4a">You get</text>
+  <text x="660" y="428" font-size="14" fill="#6b6577">&#8226; lowest possible latency, one hop</text>
+  <text x="660" y="452" font-size="14" fill="#6b6577">&#8226; hears tone, hesitation, emotion directly</text>
+  <text x="660" y="476" font-size="14" fill="#6b6577">&#8226; natural prosody, laughs, mid-word stops</text>
+  <text x="660" y="512" font-size="15" font-weight="600" fill="#c96b62">You pay</text>
+  <text x="660" y="536" font-size="14" fill="#6b6577">&#8226; one vendor, one failure domain, weaker control</text>
+  <text x="660" y="560" font-size="14" fill="#6b6577">&#8226; no text seam to inspect; harder evals and audits</text>
+</svg>

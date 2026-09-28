@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1100" height="380" fill="#faf7f2"/>
+
+  <!-- Bad row -->
+  <text x="80" y="60" font-size="15" font-weight="600" fill="#c96b62">registered too late</text>
+  <line x1="80" y1="120" x2="1020" y2="120" stroke="#3d3a4a" stroke-width="3" opacity="0.5"/>
+  <circle cx="150" cy="120" r="7" fill="#3d3a4a"/>
+  <text x="150" y="98" text-anchor="middle" font-size="13" fill="#6b6577">session starts</text>
+  <rect x="150" y="112" width="280" height="16" fill="#f9dcc4"/>
+  <text x="290" y="150" text-anchor="middle" font-size="13" fill="#6b6577">greeting (~40 s)</text>
+  <g stroke="#c96b62" stroke-width="4" stroke-linecap="round">
+    <line x1="336" y1="104" x2="364" y2="136"/>
+    <line x1="364" y1="104" x2="336" y2="136"/>
+  </g>
+  <text x="350" y="86" text-anchor="middle" font-size="13" fill="#c96b62" font-weight="600">user leaves</text>
+  <circle cx="520" cy="120" r="7" fill="#8f86c9"/>
+  <text x="520" y="150" text-anchor="middle" font-size="13" fill="#8f86c9">callback registered</text>
+  <text x="700" y="98" font-size="14" fill="#c96b62" font-weight="600">it didn't exist yet: nothing saved</text>
+
+  <!-- Good row -->
+  <text x="80" y="240" font-size="15" font-weight="600" fill="#3d3a4a">registered before the session</text>
+  <line x1="80" y1="300" x2="1020" y2="300" stroke="#3d3a4a" stroke-width="3"/>
+  <circle cx="130" cy="300" r="7" fill="#8f86c9"/>
+  <text x="130" y="330" text-anchor="middle" font-size="13" fill="#8f86c9">callback registered</text>
+  <circle cx="290" cy="300" r="7" fill="#3d3a4a"/>
+  <text x="290" y="278" text-anchor="middle" font-size="13" fill="#6b6577">session starts</text>
+  <rect x="620" y="292" width="220" height="16" fill="#dce8df"/>
+  <text x="730" y="330" text-anchor="middle" font-size="13" fill="#6b6577">cleanup gets minutes, not seconds</text>
+  <text x="920" y="278" text-anchor="middle" font-size="13" fill="#3d3a4a" font-weight="600">covered from second zero</text>
+</svg>

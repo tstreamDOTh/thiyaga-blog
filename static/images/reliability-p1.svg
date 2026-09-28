@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="p1a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a5566"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="400" fill="#faf7f2"/>
+
+  <text x="80" y="70" font-size="16" font-weight="600" fill="#3d3a4a">the call</text>
+  <line x1="80" y1="150" x2="740" y2="150" stroke="#3d3a4a" stroke-width="4"/>
+
+  <!-- snapshots -->
+  <g fill="#8f86c9">
+    <rect x="172" y="108" width="16" height="16" rx="3"/>
+    <rect x="292" y="108" width="16" height="16" rx="3"/>
+    <rect x="412" y="108" width="16" height="16" rx="3"/>
+    <rect x="532" y="108" width="16" height="16" rx="3"/>
+    <rect x="652" y="108" width="16" height="16" rx="3"/>
+  </g>
+  <line x1="180" y1="126" x2="180" y2="148" stroke="#8f86c9" stroke-width="2"/>
+  <line x1="300" y1="126" x2="300" y2="148" stroke="#8f86c9" stroke-width="2"/>
+  <line x1="420" y1="126" x2="420" y2="148" stroke="#8f86c9" stroke-width="2"/>
+  <line x1="540" y1="126" x2="540" y2="148" stroke="#8f86c9" stroke-width="2"/>
+  <line x1="660" y1="126" x2="660" y2="148" stroke="#8f86c9" stroke-width="2"/>
+  <text x="180" y="95" font-size="13" fill="#8f86c9" font-weight="600">snapshot every state write, throttled</text>
+
+  <!-- kill -->
+  <g stroke="#c96b62" stroke-width="5" stroke-linecap="round">
+    <line x1="742" y1="128" x2="778" y2="172"/>
+    <line x1="778" y1="128" x2="742" y2="172"/>
+  </g>
+  <text x="760" y="200" text-anchor="middle" font-size="14" fill="#c96b62" font-weight="600">process killed</text>
+
+  <!-- shutdown callback never runs -->
+  <line x1="790" y1="150" x2="1010" y2="150" stroke="#c96b62" stroke-width="3" stroke-dasharray="8 6" opacity="0.6"/>
+  <text x="900" y="130" text-anchor="middle" font-size="13" fill="#c96b62">the shutdown save you planned</text>
+  <text x="900" y="176" text-anchor="middle" font-size="13" fill="#c96b62">never runs</text>
+
+  <!-- recovery -->
+  <path d="M 660 160 C 660 260, 700 290, 750 290" fill="none" stroke="#5a5566" stroke-width="2.5" marker-end="url(#p1a)"/>
+  <rect x="760" y="262" width="260" height="56" rx="12" fill="#dce8df" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="890" y="288" text-anchor="middle" font-size="14" font-weight="600" fill="#3d3a4a">replacement process</text>
+  <text x="890" y="306" text-anchor="middle" font-size="13" fill="#6b6577">loads last snapshot, says "welcome back"</text>
+</svg>

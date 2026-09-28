@@ -11,13 +11,41 @@
     </image>
     <generator>Hugo -- 0.150.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Aug 2026 00:30:00 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 12:00:00 +0530</lastBuildDate>
     <atom:link href="https://thiyaga.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agentic AI</title>
+      <link>https://thiyaga.xyz/tags/agentic-ai/</link>
+      <pubDate>Mon, 28 Sep 2026 11:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/tags/agentic-ai/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://thiyaga.xyz/tags/ai/</link>
-      <pubDate>Mon, 10 Aug 2026 00:30:00 +0530</pubDate>
+      <pubDate>Mon, 28 Sep 2026 11:30:00 +0530</pubDate>
       <guid>https://thiyaga.xyz/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>https://thiyaga.xyz/tags/architecture/</link>
+      <pubDate>Mon, 28 Sep 2026 11:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/tags/architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Engineering</title>
+      <link>https://thiyaga.xyz/tags/engineering/</link>
+      <pubDate>Mon, 28 Sep 2026 11:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/tags/engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Voice AI</title>
+      <link>https://thiyaga.xyz/tags/voice-ai/</link>
+      <pubDate>Mon, 28 Sep 2026 11:30:00 +0530</pubDate>
+      <guid>https://thiyaga.xyz/tags/voice-ai/</guid>
       <description></description>
     </item>
     <item>
@@ -35,13 +63,6 @@
       <description></description>
     </item>
     <item>
-      <title>Engineering</title>
-      <link>https://thiyaga.xyz/tags/engineering/</link>
-      <pubDate>Mon, 10 Aug 2026 00:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/tags/engineering/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>LLM</title>
       <link>https://thiyaga.xyz/tags/llm/</link>
       <pubDate>Mon, 10 Aug 2026 00:30:00 +0530</pubDate>
@@ -53,27 +74,6 @@
       <link>https://thiyaga.xyz/tags/platform/</link>
       <pubDate>Mon, 10 Aug 2026 00:30:00 +0530</pubDate>
       <guid>https://thiyaga.xyz/tags/platform/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Agentic AI</title>
-      <link>https://thiyaga.xyz/tags/agentic-ai/</link>
-      <pubDate>Mon, 03 Aug 2026 00:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/tags/agentic-ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Architecture</title>
-      <link>https://thiyaga.xyz/tags/architecture/</link>
-      <pubDate>Mon, 03 Aug 2026 00:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/tags/architecture/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Voice AI</title>
-      <link>https://thiyaga.xyz/tags/voice-ai/</link>
-      <pubDate>Mon, 03 Aug 2026 00:30:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/tags/voice-ai/</guid>
       <description></description>
     </item>
     <item>

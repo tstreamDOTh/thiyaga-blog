@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="p3a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a5566"/>
+    </marker>
+    <marker id="p3r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c96b62"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="400" fill="#faf7f2"/>
+
+  <!-- naive -->
+  <text x="80" y="56" font-size="15" font-weight="600" fill="#c96b62">retry without the check</text>
+  <rect x="80" y="80" width="170" height="54" rx="10" fill="#f9dcc4" stroke="#3d3a4a" stroke-opacity="0.2"/>
+  <text x="165" y="112" text-anchor="middle" font-size="14" fill="#3d3a4a">recording #1</text>
+  <rect x="80" y="150" width="170" height="54" rx="10" fill="#f9dcc4" stroke="#3d3a4a" stroke-opacity="0.2"/>
+  <text x="165" y="182" text-anchor="middle" font-size="14" fill="#3d3a4a">recording #2</text>
+  <line x1="250" y1="107" x2="360" y2="132" stroke="#c96b62" stroke-width="2" marker-end="url(#p3r)"/>
+  <line x1="250" y1="177" x2="360" y2="152" stroke="#c96b62" stroke-width="2" marker-end="url(#p3r)"/>
+  <rect x="365" y="115" width="160" height="54" rx="10" fill="#efeae3" stroke="#c96b62" stroke-width="2"/>
+  <text x="445" y="140" text-anchor="middle" font-size="14" fill="#3d3a4a">same file path</text>
+  <text x="445" y="158" text-anchor="middle" font-size="12" fill="#c96b62">shorter overwrites longer</text>
+
+  <!-- idempotent -->
+  <text x="80" y="272" font-size="15" font-weight="600" fill="#3d3a4a">check inside every attempt</text>
+  <rect x="80" y="296" width="200" height="60" rx="10" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="180" y="322" text-anchor="middle" font-size="14" fill="#3d3a4a">already running?</text>
+  <text x="180" y="342" text-anchor="middle" font-size="12" fill="#6b6577">inside the retry, not around it</text>
+  <line x1="280" y1="312" x2="392" y2="312" stroke="#5a5566" stroke-width="2" marker-end="url(#p3a)"/>
+  <text x="336" y="300" text-anchor="middle" font-size="12" fill="#6b6577">yes: reuse</text>
+  <line x1="280" y1="344" x2="392" y2="344" stroke="#5a5566" stroke-width="2" marker-end="url(#p3a)"/>
+  <text x="336" y="364" text-anchor="middle" font-size="12" fill="#6b6577">no: start</text>
+  <rect x="396" y="296" width="180" height="60" rx="10" fill="#dce8df" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="486" y="322" text-anchor="middle" font-size="14" fill="#3d3a4a">one recording</text>
+  <text x="486" y="342" text-anchor="middle" font-size="12" fill="#6b6577">path keyed by unique token</text>
+
+  <text x="640" y="200" font-size="15" fill="#3d3a4a" font-weight="600">retries multiply whatever they wrap.</text>
+  <text x="640" y="226" font-size="15" fill="#3d3a4a">make the operation safe to run twice first,</text>
+  <text x="640" y="250" font-size="15" fill="#3d3a4a">then add the retry.</text>
+</svg>

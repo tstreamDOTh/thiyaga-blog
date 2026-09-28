@@ -11,14 +11,14 @@
     </image>
     <generator>Hugo -- 0.150.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Jul 2026 00:45:00 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 12:00:00 +0530</lastBuildDate>
     <atom:link href="https://thiyaga.xyz/tags/reliability/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>10 Principles for Building Reliable Voice Agents on LiveKit</title>
-      <link>https://thiyaga.xyz/posts/livekit-voice-agents/</link>
+      <title>10 Principles for Building Reliable Voice Agents</title>
+      <link>https://thiyaga.xyz/posts/reliable-voice-agents/</link>
       <pubDate>Wed, 29 Jul 2026 00:45:00 +0530</pubDate>
-      <guid>https://thiyaga.xyz/posts/livekit-voice-agents/</guid>
-      <description>Ten hard-earned principles for keeping voice agents reliable in production on LiveKit.</description>
+      <guid>https://thiyaga.xyz/posts/reliable-voice-agents/</guid>
+      <description>Ten hard-earned principles for keeping voice agents reliable in production, from seven months of incidents.</description>
     </item>
   </channel>
 </rss>

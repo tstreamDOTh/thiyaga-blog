@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="tArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a5566"/>
+    </marker>
+    <marker id="tArrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c96b62"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="600" fill="#faf7f2"/>
+  <text x="550" y="48" text-anchor="middle" font-size="24" font-weight="600" fill="#3d3a4a">Turn-taking as a state machine</text>
+  <text x="550" y="74" text-anchor="middle" font-size="15" fill="#8a8494">solid arrows: the happy path &#183; dashed red: where conversations break</text>
+
+  <!-- States -->
+  <rect x="120" y="140" width="220" height="100" rx="18" fill="#dce8df" stroke="#3d3a4a" stroke-opacity="0.3"/>
+  <text x="230" y="184" text-anchor="middle" font-size="20" font-weight="600" fill="#3d3a4a">Listening</text>
+  <text x="230" y="210" text-anchor="middle" font-size="13" fill="#6b6577">user has the floor</text>
+
+  <rect x="760" y="140" width="220" height="100" rx="18" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.3"/>
+  <text x="870" y="184" text-anchor="middle" font-size="20" font-weight="600" fill="#3d3a4a">Thinking</text>
+  <text x="870" y="210" text-anchor="middle" font-size="13" fill="#6b6577">LLM + tools running</text>
+
+  <rect x="440" y="420" width="220" height="100" rx="18" fill="#f9dcc4" stroke="#3d3a4a" stroke-opacity="0.3"/>
+  <text x="550" y="464" text-anchor="middle" font-size="20" font-weight="600" fill="#3d3a4a">Speaking</text>
+  <text x="550" y="490" text-anchor="middle" font-size="13" fill="#6b6577">agent has the floor</text>
+
+  <!-- Happy path -->
+  <line x1="340" y1="175" x2="757" y2="175" stroke="#5a5566" stroke-width="2" marker-end="url(#tArrow)"/>
+  <text x="548" y="162" text-anchor="middle" font-size="14" fill="#3d3a4a">endpoint: user is done</text>
+
+  <path d="M 850 243 C 810 330, 740 400, 664 440" fill="none" stroke="#5a5566" stroke-width="2" marker-end="url(#tArrow)"/>
+  <text x="800" y="352" font-size="14" fill="#3d3a4a">first TTS chunk ready</text>
+
+  <path d="M 438 442 C 350 400, 290 330, 248 243" fill="none" stroke="#5a5566" stroke-width="2" marker-end="url(#tArrow)"/>
+  <text x="180" y="352" font-size="14" fill="#3d3a4a">reply finished</text>
+
+  <!-- Failure transitions -->
+  <path d="M 350 220 C 470 260, 620 260, 745 224" fill="none" stroke="#c96b62" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#tArrowRed)"/>
+  <text x="548" y="272" text-anchor="middle" font-size="13" fill="#c96b62" font-weight="600">false endpoint: user was only pausing, agent cuts them off</text>
+
+  <path d="M 520 418 C 440 370, 380 330, 335 262" fill="none" stroke="#c96b62" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#tArrowRed)"/>
+  <text x="95" y="452" font-size="13" fill="#c96b62" font-weight="600">barge-in: user interrupts.</text>
+  <text x="95" y="470" font-size="13" fill="#c96b62">flush TTS, cancel the LLM,</text>
+  <text x="95" y="488" font-size="13" fill="#c96b62">keep only what was heard</text>
+
+  <path d="M 664 490 C 780 480, 870 420, 920 350 C 950 305, 950 280, 935 248" fill="none" stroke="#c96b62" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#tArrowRed)"/>
+  <text x="740" y="530" font-size="13" fill="#c96b62" font-weight="600">false interruption: background noise</text>
+  <text x="740" y="548" font-size="13" fill="#c96b62">read as speech pauses the agent mid-answer</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="p4r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c96b62"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="380" fill="#faf7f2"/>
+
+  <!-- primaries -->
+  <g>
+    <rect x="90" y="90" width="190" height="70" rx="12" fill="#dce8df" stroke="#3d3a4a" stroke-opacity="0.25"/>
+    <text x="185" y="132" text-anchor="middle" font-size="16" font-weight="600" fill="#3d3a4a">STT</text>
+    <rect x="330" y="90" width="190" height="70" rx="12" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.25"/>
+    <text x="425" y="132" text-anchor="middle" font-size="16" font-weight="600" fill="#3d3a4a">LLM</text>
+    <rect x="570" y="90" width="190" height="70" rx="12" fill="#d6e4f0" stroke="#3d3a4a" stroke-opacity="0.25"/>
+    <text x="665" y="132" text-anchor="middle" font-size="16" font-weight="600" fill="#3d3a4a">TTS</text>
+    <rect x="810" y="90" width="190" height="70" rx="12" fill="#f9dcc4" stroke="#3d3a4a" stroke-opacity="0.25"/>
+    <text x="905" y="132" text-anchor="middle" font-size="16" font-weight="600" fill="#3d3a4a">Avatar</text>
+  </g>
+
+  <!-- failure bolt on LLM -->
+  <path d="M 432 60 L 416 88 L 428 88 L 414 116" fill="none" stroke="#c96b62" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- backups (ghosts) -->
+  <g stroke="#3d3a4a" stroke-opacity="0.3" stroke-dasharray="6 4" fill="#efeae3">
+    <rect x="90" y="240" width="190" height="64" rx="12"/>
+    <rect x="330" y="240" width="190" height="64" rx="12"/>
+    <rect x="570" y="240" width="190" height="64" rx="12"/>
+    <rect x="810" y="240" width="190" height="64" rx="12"/>
+  </g>
+  <text x="185" y="268" text-anchor="middle" font-size="13" fill="#6b6577">backup, per language</text>
+  <text x="425" y="268" text-anchor="middle" font-size="13" fill="#6b6577">different model,</text>
+  <text x="425" y="286" text-anchor="middle" font-size="13" fill="#6b6577">same prompts</text>
+  <text x="665" y="268" text-anchor="middle" font-size="13" fill="#6b6577">backup voice</text>
+  <text x="905" y="268" text-anchor="middle" font-size="13" fill="#6b6577">no backup:</text>
+  <text x="905" y="286" text-anchor="middle" font-size="13" fill="#6b6577">drop to plain voice</text>
+
+  <line x1="425" y1="162" x2="425" y2="236" stroke="#c96b62" stroke-width="2.5" marker-end="url(#p4r)"/>
+  <text x="445" y="200" font-size="13" fill="#c96b62" font-weight="600">created only on failure</text>
+  <text x="445" y="218" font-size="13" fill="#c96b62">zero cost on the happy path</text>
+
+  <text x="90" y="350" font-size="13" fill="#8a8494">count every activation: notice when plan B is quietly carrying your traffic</text>
+</svg>

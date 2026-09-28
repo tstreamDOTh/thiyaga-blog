@@ -6,8 +6,8 @@ tags: ["AI", "Voice AI", "Agentic AI", "Engineering", "Architecture"]
 categories: ["AI Engineering"]
 cover:
   image: "/images/voice-pipeline-anatomy-banner.png"
-  alt: "Abstract pastel shapes forming a loop, audio flowing through stages"
-  caption: "A voice agent is a loop, not a request and a response"
+  alt: "A line passing through three small circles on a pastel teal background"
+  caption: "A voice pipeline: one signal, passing through stages"
 description: "The stages of an agentic voice pipeline, what each one is for, where the latency goes, and when to skip the pipeline entirely."
 showToc: false
 TocOpen: false

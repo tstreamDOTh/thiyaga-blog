@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="p5a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a5566"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="400" fill="#faf7f2"/>
+
+  <!-- staircase -->
+  <rect x="70" y="60" width="230" height="64" rx="12" fill="#f9dcc4" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="185" y="98" text-anchor="middle" font-size="15" font-weight="600" fill="#3d3a4a">avatar + voice</text>
+
+  <rect x="330" y="130" width="230" height="64" rx="12" fill="#d6e4f0" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="445" y="168" text-anchor="middle" font-size="15" font-weight="600" fill="#3d3a4a">voice only</text>
+
+  <rect x="590" y="200" width="230" height="64" rx="12" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="705" y="230" text-anchor="middle" font-size="15" font-weight="600" fill="#3d3a4a">apology + nudge</text>
+  <text x="705" y="250" text-anchor="middle" font-size="12" fill="#6b6577">"give me a second"</text>
+
+  <rect x="850" y="270" width="200" height="64" rx="12" fill="#dce8df" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="950" y="300" text-anchor="middle" font-size="15" font-weight="600" fill="#3d3a4a">clean goodbye</text>
+  <text x="950" y="320" text-anchor="middle" font-size="12" fill="#6b6577">exception budget spent</text>
+
+  <path d="M 300 100 C 320 110, 320 140, 335 152" fill="none" stroke="#5a5566" stroke-width="2" marker-end="url(#p5a)"/>
+  <text x="255" y="150" font-size="12" fill="#8a8494">avatar dies</text>
+  <path d="M 560 170 C 580 180, 580 210, 595 222" fill="none" stroke="#5a5566" stroke-width="2" marker-end="url(#p5a)"/>
+  <text x="512" y="220" font-size="12" fill="#8a8494">voice hiccups</text>
+  <path d="M 820 240 C 840 250, 840 280, 855 292" fill="none" stroke="#5a5566" stroke-width="2" marker-end="url(#p5a)"/>
+  <text x="770" y="290" font-size="12" fill="#8a8494">errors repeat</text>
+
+  <!-- silence: never -->
+  <rect x="70" y="280" width="230" height="64" rx="12" fill="none" stroke="#c96b62" stroke-width="2.5"/>
+  <text x="185" y="318" text-anchor="middle" font-size="15" font-weight="600" fill="#c96b62">silence</text>
+  <g stroke="#c96b62" stroke-width="4" stroke-linecap="round">
+    <line x1="90" y1="292" x2="118" y2="332"/>
+    <line x1="118" y1="292" x2="90" y2="332"/>
+  </g>
+  <text x="70" y="372" font-size="13" fill="#c96b62">every step down still makes sound. the only forbidden state is a dead line.</text>
+</svg>

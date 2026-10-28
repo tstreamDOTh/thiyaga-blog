@@ -8,7 +8,7 @@
   @keyframes tvoice-ring { 0% { transform: scale(0.8); opacity: 0.6; } 100% { transform: scale(1.6); opacity: 0; } }
 </style>
 <g class="tvoice">
-<rect width="1200" height="400" fill="#d6e6f4"/>
+<rect width="1200" height="400" fill="#8FC9FF"/>
 <circle class="ring" cx="600" cy="200" r="92" fill="none" stroke="#3a3a3a" stroke-width="6" opacity="0.3"/>
 <circle class="core" cx="600" cy="200" r="60" fill="#3a3a3a"/>
 </g>

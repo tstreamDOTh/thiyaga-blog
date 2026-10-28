@@ -10,7 +10,8 @@ Generate a cover/banner image for a blog post in Thiyagaraj's established style:
 ## Style rules (non-negotiable)
 
 - **Canvas:** 1200×630 PNG (OpenGraph size). Draw at 2× (2400×1260) and downscale with LANCZOS for antialiasing.
-- **Background:** one flat pastel color, chosen loosely to fit the post's mood. Each post on the blog gets a *different* pastel so the listing page looks varied. Examples already used: pastel orange `(255, 226, 197)`, pastel blue `(214, 230, 244)`, lavender `(231, 225, 244)`, mint `(215, 237, 226)`, pastel yellow `(250, 238, 205)`. Pick a new-but-similar tone if those are taken.
+- **Background:** one flat, bright pastel, chosen loosely to fit the post's mood. Each post gets a *different* colour so the listing page looks varied. Palette in use (2026-10): sky `#A9D6FF`, rose `#FFBFC9`, lavender `#D4C4FF`, peach `#FFCBA0`, yellow `#FFE27A`, pink `#FFB4D9`, mint `#A8EBC9`, aqua `#9EE5E0`. Pick a new tone in the same saturation range; avoid the washed-out pastels used before.
+- **Two files per post:** the PNG (for og:image / link previews) and an SVG twin at `static/images/<slug>-banner.svg` with the same shapes, inlined on the site and animated only on card hover (one quick, sub-second, single-run motion under `:is(.post-entry,.home-tile,.entry-cover):hover`, scoped by a unique class prefix). Frontmatter sets both `cover.image` and `cover.animated`.
 - **Shapes:** dark grey `(58, 58, 58)` only. Filled vs. outlined is a meaningful contrast (e.g. filled = solid/working, outlined = hollow/failed/moving). For "faded/ghost" elements, blend the dark grey toward the background color, never use a second hue.
 - **Composition:** generous padding — shapes occupy roughly the middle 50–60% of the canvas; nothing near the edges. Fewer shapes is better. No text, no gradients, no icons, no drop shadows.
 - **Metaphor:** the shapes should encode ONE idea from the title, readable in a second. Examples from existing banners:

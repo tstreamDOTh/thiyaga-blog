@@ -8,7 +8,7 @@
   @keyframes ccost-absorb { 0%,60% { transform: scale(1); } 80% { transform: scale(1.12); } 100% { transform: scale(1); } }
 </style>
 <g class="ccost">
-<rect width="1200" height="630" fill="#f7dfe2"/>
+<rect width="1200" height="630" fill="#FFB4D9"/>
 <circle class="tok" cx="330" cy="240" r="16" fill="#3a3a3a" style="--dx:430px;--dy:75px;animation-delay:0.00s"/>
 <circle class="tok" cx="415" cy="214" r="16" fill="#3a3a3a" style="--dx:345px;--dy:101px;animation-delay:0.05s"/>
 <circle class="tok" cx="475" cy="237" r="16" fill="#3a3a3a" style="--dx:285px;--dy:78px;animation-delay:0.10s"/>

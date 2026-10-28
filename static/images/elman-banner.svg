@@ -6,7 +6,7 @@
   @keyframes celman-draw { 0% { stroke-dashoffset: 520; } 100% { stroke-dashoffset: 0; } }
 </style>
 <g class="celman">
-<rect width="1200" height="630" fill="#e7e1f4"/>
+<rect width="1200" height="630" fill="#D4C4FF"/>
 <circle cx="355" cy="372" r="30" fill="#3a3a3a"/>
 <circle cx="478" cy="372" r="30" fill="#3a3a3a"/>
 <circle cx="601" cy="372" r="30" fill="#3a3a3a"/>

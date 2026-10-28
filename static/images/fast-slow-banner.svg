@@ -8,7 +8,7 @@
   @keyframes cfast-ghost { 0% { opacity: 0; } 100% { opacity: var(--o); } }
 </style>
 <g class="cfast">
-<rect width="1200" height="630" fill="#ffe2c5"/>
+<rect width="1200" height="630" fill="#FFCBA0"/>
 <rect x="300" y="408" width="105" height="105" fill="#3a3a3a"/>
 <circle class="ghost" style="--o:0.25" cx="490" cy="270" r="68" fill="none" stroke="#3a3a3a" stroke-width="10" opacity="0.25"/>
 <circle class="ghost" style="--o:0.42" cx="580" cy="270" r="68" fill="none" stroke="#3a3a3a" stroke-width="10" opacity="0.42"/>

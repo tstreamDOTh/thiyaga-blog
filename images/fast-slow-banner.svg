@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice" class="anim-cover">
+<style>
+  .cfast * { transform-box: fill-box; transform-origin: center; }
+  @media (prefers-reduced-motion: reduce) { .cfast * { animation: none !important; } }
+  :is(.post-entry,.home-tile,.entry-cover):hover .cfast .dash { animation: cfast-streak 0.6s ease-out 1; }
+  @keyframes cfast-streak { 0% { transform: translateX(-70px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; } }
+  :is(.post-entry,.home-tile,.entry-cover):hover .cfast .ghost { animation: cfast-ghost 0.6s ease-out 1; }
+  @keyframes cfast-ghost { 0% { opacity: 0; } 100% { opacity: var(--o); } }
+</style>
+<g class="cfast">
+<rect width="1200" height="630" fill="#ffe2c5"/>
+<rect x="300" y="408" width="105" height="105" fill="#3a3a3a"/>
+<circle class="ghost" style="--o:0.25" cx="490" cy="270" r="68" fill="none" stroke="#3a3a3a" stroke-width="10" opacity="0.25"/>
+<circle class="ghost" style="--o:0.42" cx="580" cy="270" r="68" fill="none" stroke="#3a3a3a" stroke-width="10" opacity="0.42"/>
+<circle class="ghost" style="--o:0.62" cx="670" cy="270" r="68" fill="none" stroke="#3a3a3a" stroke-width="10" opacity="0.62"/>
+<circle cx="760" cy="270" r="68" fill="none" stroke="#3a3a3a" stroke-width="10"/>
+<line class="dash" x1="478" y1="246" x2="536" y2="246" stroke="#3a3a3a" stroke-width="8" stroke-linecap="round" style="animation-delay:0s"/>
+<line class="dash" x1="440" y1="270" x2="500" y2="270" stroke="#3a3a3a" stroke-width="8" stroke-linecap="round" style="animation-delay:0.08s"/>
+<line class="dash" x1="478" y1="294" x2="536" y2="294" stroke="#3a3a3a" stroke-width="8" stroke-linecap="round" style="animation-delay:0.16s"/>
+</g>
+</svg>

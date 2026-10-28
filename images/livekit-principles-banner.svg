@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice" class="anim-cover">
+<style>
+  .crel * { transform-box: fill-box; transform-origin: center; }
+  @media (prefers-reduced-motion: reduce) { .crel * { animation: none !important; } }
+  :is(.post-entry,.home-tile,.entry-cover):hover .crel .bypass { animation: crel-route 0.7s ease-out 1; }
+  @keyframes crel-route { 0% { stroke-dashoffset: 480; } 100% { stroke-dashoffset: 0; } }
+  :is(.post-entry,.home-tile,.entry-cover):hover .crel .failed { animation: crel-blink 0.7s ease-out 1; }
+  @keyframes crel-blink { 0% { opacity: 1; } 30% { opacity: 0.2; } 100% { opacity: 1; } }
+</style>
+<g class="crel">
+<rect width="1200" height="630" fill="#faeecd"/>
+<line x1="328" y1="340" x2="422" y2="340" stroke="#3a3a3a" stroke-width="10"/>
+<line x1="478" y1="340" x2="518" y2="340" stroke="#3a3a3a" stroke-width="10"/>
+<line x1="682" y1="340" x2="722" y2="340" stroke="#3a3a3a" stroke-width="10"/>
+<line x1="778" y1="340" x2="872" y2="340" stroke="#3a3a3a" stroke-width="10"/>
+<circle cx="300" cy="340" r="28" fill="#3a3a3a"/>
+<circle cx="450" cy="340" r="28" fill="#3a3a3a"/>
+<circle class="failed" cx="600" cy="340" r="28" fill="none" stroke="#3a3a3a" stroke-width="10"/>
+<circle cx="750" cy="340" r="28" fill="#3a3a3a"/>
+<circle cx="900" cy="340" r="28" fill="#3a3a3a"/>
+<path class="bypass" d="M 450 340 A 150 140 0 0 1 750 340" fill="none" stroke="#3a3a3a" stroke-width="10" stroke-linecap="round" stroke-dasharray="480" stroke-dashoffset="0"/>
+</g>
+</svg>

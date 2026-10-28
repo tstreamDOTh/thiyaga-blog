@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1100" height="380" fill="#faf7f2"/>
+  <!-- transcript box -->
+  <rect x="390" y="70" width="320" height="230" rx="12" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.25"/>
+  <text x="550" y="100" text-anchor="middle" font-size="15" font-weight="600" fill="#3d3a4a">what the judge sees</text>
+  <g font-size="12" fill="#3d3a4a">
+    <text x="410" y="135">12. Agent: Tell me about the migration.</text>
+    <text x="410" y="160">13. Candidate: Sure. I led it, we had...</text>
+    <text x="410" y="185">14. Agent: How big was the team?</text>
+    <text x="410" y="210">15. Candidate: Six people, across two...</text>
+    <text x="410" y="235">16. Agent: What was the outcome?</text>
+  </g>
+  <text x="550" y="280" text-anchor="middle" font-size="12" fill="#6b6577">reads as a clean conversation</text>
+  <!-- outside: left -->
+  <g font-size="13" fill="#c96b62">
+    <text x="330" y="110" text-anchor="end" font-weight="600">audio</text>
+    <text x="330" y="128" text-anchor="end" font-size="12" fill="#6b6577">clipped words, name mispronounced</text>
+    <text x="330" y="180" text-anchor="end" font-weight="600">timing</text>
+    <text x="330" y="198" text-anchor="end" font-size="12" fill="#6b6577">3s of dead air before turn 14</text>
+    <text x="330" y="250" text-anchor="end" font-weight="600">turn-taking</text>
+    <text x="330" y="268" text-anchor="end" font-size="12" fill="#6b6577">turn 16 cut the candidate off</text>
+  </g>
+  <!-- outside: right -->
+  <g font-size="13" fill="#c96b62">
+    <text x="770" y="110" font-weight="600">transcription</text>
+    <text x="770" y="128" font-size="12" fill="#6b6577">"six" was "sixty". the text lies</text>
+    <text x="770" y="180" font-weight="600">screen</text>
+    <text x="770" y="198" font-size="12" fill="#6b6577">the editor never loaded</text>
+    <text x="770" y="250" font-weight="600">unnamed failures</text>
+    <text x="770" y="268" font-size="12" fill="#6b6577">no rule exists yet, so no verdict</text>
+  </g>
+  <text x="550" y="345" text-anchor="middle" font-size="13" fill="#3d3a4a" font-weight="600">everything in red happened. none of it is in the transcript.</text>
+</svg>

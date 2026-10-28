@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1100" height="330" fill="#faf7f2"/>
+  <text x="80" y="50" font-size="15" font-weight="600" fill="#3d3a4a">100 conversations after a prompt change</text>
+  <g fill="#5a5566">
+    <circle cx="90" cy="90" r="7"/>
+    <circle cx="116" cy="90" r="7"/>
+    <circle cx="142" cy="90" r="7"/>
+    <circle cx="168" cy="90" r="7"/>
+    <circle cx="194" cy="90" r="7"/>
+    <circle cx="220" cy="90" r="7"/>
+    <circle cx="246" cy="90" r="7"/>
+    <circle cx="272" cy="90" r="7"/>
+    <circle cx="298" cy="90" r="7"/>
+    <circle cx="324" cy="90" r="7"/>
+    <circle cx="350" cy="90" r="7"/>
+    <circle cx="376" cy="90" r="7"/>
+    <circle cx="402" cy="90" r="7"/>
+    <circle cx="428" cy="90" r="7"/>
+    <circle cx="454" cy="90" r="7"/>
+    <circle cx="480" cy="90" r="7"/>
+    <circle cx="506" cy="90" r="7"/>
+    <circle cx="532" cy="90" r="7"/>
+    <circle cx="558" cy="90" r="7"/>
+    <circle cx="584" cy="90" r="7"/>
+    <circle cx="90" cy="116" r="7"/>
+    <circle cx="116" cy="116" r="7"/>
+    <circle cx="142" cy="116" r="7"/>
+    <circle cx="168" cy="116" r="7"/>
+    <circle cx="194" cy="116" r="7"/>
+    <circle cx="220" cy="116" r="7"/>
+    <circle cx="246" cy="116" r="7"/>
+    <circle cx="272" cy="116" r="7"/>
+    <circle cx="298" cy="116" r="7"/>
+    <circle cx="324" cy="116" r="7"/>
+    <circle cx="350" cy="116" r="7"/>
+    <circle cx="376" cy="116" r="7"/>
+    <circle cx="402" cy="116" r="7"/>
+    <circle cx="428" cy="116" r="7"/>
+    <circle cx="454" cy="116" r="7"/>
+    <circle cx="480" cy="116" r="7"/>
+    <circle cx="506" cy="116" r="7"/>
+    <circle cx="532" cy="116" r="7"/>
+    <circle cx="558" cy="116" r="7"/>
+    <circle cx="584" cy="116" r="7"/>
+    <circle cx="90" cy="142" r="7"/>
+    <circle cx="116" cy="142" r="7"/>
+    <circle cx="142" cy="142" r="7"/>
+    <circle cx="168" cy="142" r="7"/>
+    <circle cx="194" cy="142" r="7"/>
+    <circle cx="220" cy="142" r="7"/>
+    <circle cx="246" cy="142" r="7"/>
+    <circle cx="272" cy="142" r="7"/>
+    <circle cx="298" cy="142" r="7"/>
+    <circle cx="324" cy="142" r="7"/>
+    <circle cx="350" cy="142" r="7"/>
+    <circle cx="376" cy="142" r="7"/>
+    <circle cx="402" cy="142" r="7"/>
+    <circle cx="428" cy="142" r="7"/>
+    <circle cx="454" cy="142" r="7"/>
+    <circle cx="480" cy="142" r="7"/>
+    <circle cx="506" cy="142" r="7"/>
+    <circle cx="532" cy="142" r="8" fill="none" stroke="#c96b62" stroke-width="3"/>
+    <circle cx="558" cy="142" r="7"/>
+    <circle cx="584" cy="142" r="7"/>
+    <circle cx="90" cy="168" r="7"/>
+    <circle cx="116" cy="168" r="7"/>
+    <circle cx="142" cy="168" r="7"/>
+    <circle cx="168" cy="168" r="7"/>
+    <circle cx="194" cy="168" r="7"/>
+    <circle cx="220" cy="168" r="7"/>
+    <circle cx="246" cy="168" r="7"/>
+    <circle cx="272" cy="168" r="7"/>
+    <circle cx="298" cy="168" r="7"/>
+    <circle cx="324" cy="168" r="7"/>
+    <circle cx="350" cy="168" r="7"/>
+    <circle cx="376" cy="168" r="7"/>
+    <circle cx="402" cy="168" r="7"/>
+    <circle cx="428" cy="168" r="7"/>
+    <circle cx="454" cy="168" r="7"/>
+    <circle cx="480" cy="168" r="7"/>
+    <circle cx="506" cy="168" r="7"/>
+    <circle cx="532" cy="168" r="7"/>
+    <circle cx="558" cy="168" r="7"/>
+    <circle cx="584" cy="168" r="7"/>
+    <circle cx="90" cy="194" r="7"/>
+    <circle cx="116" cy="194" r="7"/>
+    <circle cx="142" cy="194" r="7"/>
+    <circle cx="168" cy="194" r="7"/>
+    <circle cx="194" cy="194" r="7"/>
+    <circle cx="220" cy="194" r="7"/>
+    <circle cx="246" cy="194" r="7"/>
+    <circle cx="272" cy="194" r="7"/>
+    <circle cx="298" cy="194" r="7"/>
+    <circle cx="324" cy="194" r="7"/>
+    <circle cx="350" cy="194" r="7"/>
+    <circle cx="376" cy="194" r="7"/>
+    <circle cx="402" cy="194" r="7"/>
+    <circle cx="428" cy="194" r="7"/>
+    <circle cx="454" cy="194" r="7"/>
+    <circle cx="480" cy="194" r="7"/>
+    <circle cx="506" cy="194" r="7"/>
+    <circle cx="532" cy="194" r="7"/>
+    <circle cx="558" cy="194" r="7"/>
+    <circle cx="584" cy="194" r="7"/>
+  </g>
+  <line x1="660" y1="60" x2="660" y2="260" stroke="#3d3a4a" stroke-opacity="0.15" stroke-width="2"/>
+  <text x="720" y="100" font-size="15" fill="#6b6577">the average says</text>
+  <text x="720" y="136" font-size="30" font-weight="700" fill="#3d3a4a">99% good</text>
+  <text x="720" y="200" font-size="15" fill="#6b6577">the user says</text>
+  <text x="720" y="236" font-size="22" font-weight="700" fill="#c96b62">"it hung up on me mid-sentence"</text>
+  <text x="550" y="300" text-anchor="middle" font-size="13" fill="#6b6577">catastrophic failures get a count and a ceiling, never an average</text>
+</svg>

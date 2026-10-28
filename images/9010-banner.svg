@@ -6,7 +6,7 @@
   @keyframes c9010-pop { 0% { transform: scale(1); } 40% { transform: scale(1.35); } 100% { transform: scale(1); } }
 </style>
 <g class="c9010">
-<rect width="1200" height="630" fill="#d6e6f4"/>
+<rect width="1200" height="630" fill="#A9D6FF"/>
 <rect x="205" y="290" width="50" height="50" fill="#3a3a3a"/>
 <rect x="287" y="290" width="50" height="50" fill="#3a3a3a"/>
 <rect x="369" y="290" width="50" height="50" fill="#3a3a3a"/>

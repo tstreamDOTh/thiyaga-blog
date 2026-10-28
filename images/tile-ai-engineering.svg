@@ -6,7 +6,7 @@
   @keyframes teng-pop { 0% { transform: scale(1); } 45% { transform: scale(1.3); } 100% { transform: scale(1); } }
 </style>
 <g class="teng">
-<rect width="1200" height="400" fill="#faeecd"/>
+<rect width="1200" height="400" fill="#FFD972"/>
 <rect x="411" y="170" width="60" height="60" rx="8" fill="#3a3a3a"/>
 <rect x="517" y="170" width="60" height="60" rx="8" fill="#3a3a3a"/>
 <rect x="623" y="170" width="60" height="60" rx="8" fill="#3a3a3a"/>

@@ -8,7 +8,7 @@
   @keyframes crel-blink { 0% { opacity: 1; } 30% { opacity: 0.2; } 100% { opacity: 1; } }
 </style>
 <g class="crel">
-<rect width="1200" height="630" fill="#faeecd"/>
+<rect width="1200" height="630" fill="#FFE27A"/>
 <line x1="328" y1="340" x2="422" y2="340" stroke="#3a3a3a" stroke-width="10"/>
 <line x1="478" y1="340" x2="518" y2="340" stroke="#3a3a3a" stroke-width="10"/>
 <line x1="682" y1="340" x2="722" y2="340" stroke="#3a3a3a" stroke-width="10"/>

@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 28 Sep 2026 12:00:00 +0530</lastBuildDate>
+			<lastBuildDate>Wed, 28 Oct 2026 00:30:00 +0530</lastBuildDate>
 		
 			<atom:link href="https://thiyaga.xyz/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>No Answer Key: How to Measure Conversation Quality</title>
+				<link>https://thiyaga.xyz/posts/conversation-quality-metrics/</link>
+				<pubDate>Wed, 28 Oct 2026 00:30:00 +0530</pubDate>
+				<guid>https://thiyaga.xyz/posts/conversation-quality-metrics/</guid>
+				<description>&lt;p&gt;&lt;em&gt;Say you run an agent that does 20-minute phone screens. It greets the candidate, asks about their last two roles, digs into one project, answers questions about the job, and wraps up. Thousands of calls a day. You change one line in the prompt. Did the calls get better or worse?&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;This post is how we answer that question.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-what-does-not-work&#34;&gt;1. What does not work&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://thiyaga.xyz/images/cq-no-golden.svg&#34; alt=&#34;A task eval diffs one output against one reference; a conversation has three good next questions and nothing to diff against&#34;&gt;&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Anatomy of an Agentic Voice Pipeline</title>
 				<link>https://thiyaga.xyz/posts/agentic-voice-pipelines/</link>

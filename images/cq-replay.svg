@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ra" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5a5566"/></marker>
+    <marker id="rr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c96b62"/></marker>
+  </defs>
+  <rect width="1100" height="360" fill="#faf7f2"/>
+  <!-- isolated -->
+  <text x="80" y="50" font-size="15" font-weight="600" fill="#3d3a4a">score turns in isolation</text>
+  <g font-size="13" fill="#3d3a4a">
+    <rect x="80" y="70" width="90" height="46" rx="8" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.2"/><text x="125" y="98" text-anchor="middle">turn 3</text>
+    <rect x="190" y="70" width="90" height="46" rx="8" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.2"/><text x="235" y="98" text-anchor="middle">turn 4</text>
+    <rect x="300" y="70" width="90" height="46" rx="8" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.2"/><text x="345" y="98" text-anchor="middle">turn 5</text>
+    <rect x="410" y="70" width="90" height="46" rx="8" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.2"/><text x="455" y="98" text-anchor="middle">turn 6</text>
+  </g>
+  <g font-size="12" fill="#6b6577" text-anchor="middle">
+    <text x="125" y="140">4.6</text><text x="235" y="140">4.1</text><text x="345" y="140">4.5</text><text x="455" y="140">4.7</text>
+  </g>
+  <text x="290" y="172" text-anchor="middle" font-size="13" fill="#6b6577">each turn gets the real transcript as context. all look fine.</text>
+
+  <!-- replay -->
+  <text x="80" y="230" font-size="15" font-weight="600" fill="#3d3a4a">replay the whole conversation</text>
+  <g font-size="13" fill="#3d3a4a">
+    <rect x="80" y="250" width="90" height="46" rx="8" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.2"/><text x="125" y="278" text-anchor="middle">turn 3</text>
+    <rect x="190" y="256" width="90" height="46" rx="8" fill="#f9dcc4" stroke="#c96b62" stroke-width="2"/><text x="235" y="284" text-anchor="middle">turn 4</text>
+    <rect x="300" y="268" width="90" height="46" rx="8" fill="#f9dcc4" stroke="#c96b62" stroke-width="2"/><text x="345" y="296" text-anchor="middle">turn 5</text>
+    <rect x="410" y="286" width="90" height="46" rx="8" fill="#f9dcc4" stroke="#c96b62" stroke-width="2"/><text x="455" y="314" text-anchor="middle">turn 6</text>
+  </g>
+  <line x1="170" y1="273" x2="188" y2="279" stroke="#5a5566" stroke-width="2" marker-end="url(#ra)"/>
+  <line x1="280" y1="282" x2="298" y2="291" stroke="#c96b62" stroke-width="2" marker-end="url(#rr)"/>
+  <line x1="390" y1="296" x2="408" y2="309" stroke="#c96b62" stroke-width="2" marker-end="url(#rr)"/>
+  <text x="620" y="275" font-size="13" fill="#c96b62" font-weight="600">a slightly off turn 4 changes what the user says at 5</text>
+  <text x="620" y="297" font-size="13" fill="#6b6577">by turn 6 the agent is off the plan. no single turn looked bad.</text>
+  <text x="620" y="330" font-size="13" fill="#3d3a4a" font-weight="600">isolated turns for fast iteration. full replays for the gate.</text>
+</svg>

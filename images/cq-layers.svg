@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1100" height="420" fill="#faf7f2"/>
+  <!-- layers -->
+  <g font-size="15" fill="#3d3a4a">
+    <rect x="300" y="40" width="500" height="54" rx="10" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.2"/>
+    <text x="320" y="63" font-weight="600">1. Signals</text>
+    <text x="320" y="83" font-size="13" fill="#6b6577">latency p95, silence gaps, drops, fallbacks fired, cost</text>
+
+    <rect x="300" y="108" width="500" height="54" rx="10" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.2"/>
+    <text x="320" y="131" font-weight="600">2. Decision points</text>
+    <text x="320" y="151" font-size="13" fill="#6b6577">intent, phase, end-of-conversation, tool calls: precision / recall per class</text>
+
+    <rect x="300" y="176" width="500" height="54" rx="10" fill="#f9dcc4" stroke="#3d3a4a" stroke-opacity="0.2"/>
+    <text x="320" y="199" font-weight="600">3. Turn quality</text>
+    <text x="320" y="219" font-size="13" fill="#6b6577">relevance, grounding, instruction adherence, repetition</text>
+
+    <rect x="300" y="244" width="500" height="54" rx="10" fill="#f9dcc4" stroke="#3d3a4a" stroke-opacity="0.2"/>
+    <text x="320" y="267" font-weight="600">4. Conversation quality</text>
+    <text x="320" y="287" font-size="13" fill="#6b6577">coverage, state accuracy, recovery, ending</text>
+
+    <rect x="300" y="312" width="500" height="54" rx="10" fill="#efeae3" stroke="#3d3a4a" stroke-opacity="0.2"/>
+    <text x="320" y="335" font-weight="600">5. Outcomes</text>
+    <text x="320" y="355" font-size="13" fill="#6b6577">human agreement, user feedback, complaints</text>
+  </g>
+  <!-- left axis -->
+  <line x1="250" y1="50" x2="250" y2="360" stroke="#5a5566" stroke-width="2"/>
+  <text x="240" y="60" text-anchor="end" font-size="13" fill="#3d3a4a" font-weight="600">exact, free</text>
+  <text x="240" y="78" text-anchor="end" font-size="12" fill="#6b6577">from logs, no LLM</text>
+  <text x="240" y="350" text-anchor="end" font-size="13" fill="#3d3a4a" font-weight="600">fuzzy, expensive</text>
+  <text x="240" y="368" text-anchor="end" font-size="12" fill="#6b6577">humans, slow</text>
+  <!-- right column: where it runs -->
+  <g font-size="13" fill="#3d3a4a">
+    <text x="840" y="30" font-weight="600" fill="#6b6577">runs on</text>
+    <text x="840" y="72">every conversation, live</text>
+    <text x="840" y="140">every PR, golden set</text>
+    <text x="840" y="208">every PR + 2% of prod</text>
+    <text x="840" y="276">every PR + 2% of prod</text>
+    <text x="840" y="344">monthly, by hand</text>
+  </g>
+  <text x="550" y="400" text-anchor="middle" font-size="13" fill="#c96b62" font-weight="600">most teams start at the bottom. start at the top.</text>
+</svg>

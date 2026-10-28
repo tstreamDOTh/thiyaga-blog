@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5a5566"/></marker>
+  </defs>
+  <rect width="1100" height="420" fill="#faf7f2"/>
+  <g font-size="14" fill="#3d3a4a" text-anchor="middle">
+    <rect x="50" y="150" width="150" height="70" rx="10" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.2"/>
+    <text x="125" y="180">daily sample</text>
+    <text x="125" y="200" font-size="12" fill="#6b6577">recordings + transcripts</text>
+
+    <rect x="260" y="150" width="150" height="70" rx="10" fill="#f9dcc4" stroke="#3d3a4a" stroke-opacity="0.2"/>
+    <text x="335" y="180">annotators</text>
+    <text x="335" y="200" font-size="12" fill="#6b6577">they listen</text>
+
+    <rect x="455" y="150" width="180" height="70" rx="10" fill="#efeae3" stroke="#3d3a4a" stroke-opacity="0.2"/>
+    <text x="545" y="180">issue sheet</text>
+    <text x="545" y="200" font-size="12" fill="#6b6577">session, turn, what, severity</text>
+
+    <rect x="690" y="40" width="200" height="56" rx="10" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.2"/>
+    <text x="790" y="64">in the transcript, no rule</text>
+    <text x="790" y="84" font-size="12" fill="#6b6577">write a rule, grade the judge</text>
+
+    <rect x="690" y="157" width="200" height="56" rx="10" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.2"/>
+    <text x="790" y="181">not in the transcript</text>
+    <text x="790" y="201" font-size="12" fill="#6b6577">add a signal metric instead</text>
+
+    <rect x="690" y="274" width="200" height="56" rx="10" fill="#e4dcf1" stroke="#3d3a4a" stroke-opacity="0.2"/>
+    <text x="790" y="298">judge got a rule wrong</text>
+    <text x="790" y="318" font-size="12" fill="#6b6577">fix the text, bump the version</text>
+
+    <rect x="950" y="150" width="110" height="70" rx="10" fill="#f9dcc4" stroke="#3d3a4a" stroke-opacity="0.2"/>
+    <text x="1005" y="190">the gate</text>
+  </g>
+  <line x1="200" y1="185" x2="255" y2="185" stroke="#5a5566" stroke-width="2" marker-end="url(#ha)"/>
+  <line x1="410" y1="185" x2="450" y2="185" stroke="#5a5566" stroke-width="2" marker-end="url(#ha)"/>
+  <line x1="635" y1="175" x2="685" y2="80" stroke="#5a5566" stroke-width="2" marker-end="url(#ha)"/>
+  <line x1="635" y1="185" x2="685" y2="185" stroke="#5a5566" stroke-width="2" marker-end="url(#ha)"/>
+  <line x1="635" y1="195" x2="685" y2="295" stroke="#5a5566" stroke-width="2" marker-end="url(#ha)"/>
+  <line x1="890" y1="75" x2="945" y2="165" stroke="#5a5566" stroke-width="2" marker-end="url(#ha)"/>
+  <line x1="890" y1="185" x2="945" y2="185" stroke="#5a5566" stroke-width="2" marker-end="url(#ha)"/>
+  <line x1="890" y1="300" x2="945" y2="205" stroke="#5a5566" stroke-width="2" marker-end="url(#ha)"/>
+  <!-- judge audit arrow -->
+  <path d="M 335 220 Q 335 370 760 370 Q 1005 370 1005 225" fill="none" stroke="#c96b62" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ha)"/>
+  <text x="640" y="395" text-anchor="middle" font-size="13" fill="#c96b62" font-weight="600">second job: mark the judge's own verdicts right or wrong. that is where per-rule precision and recall come from.</text>
+</svg>

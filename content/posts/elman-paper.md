@@ -6,6 +6,7 @@ tags: ["AI", "RNN", "Transformers", "LLM"]
 categories: ["AI Engineering"]
 cover:
   image: "/images/elman-banner.png"
+  animated: "/images/elman-banner.svg"
   alt: "A sequence of circles in time with an arc looping back - recurrence"
   caption: "A sequence unfolding in time, with a loop back - what happens when time collapses into state?"
 description: "Decoding Jeffrey Elman's 1990 paper 'Finding Structure in Time' - how a tiny recurrent network discovered linguistic structure just by predicting the next word, and why that idea underpins today's LLMs."

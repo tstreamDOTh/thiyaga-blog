@@ -3,9 +3,10 @@ title: "Anatomy of an Agentic Voice Pipeline"
 date: 2026-09-28T11:30:00+05:30
 draft: false
 tags: ["AI", "Voice AI", "Agentic AI", "Engineering", "Architecture"]
-categories: ["AI Engineering"]
+categories: ["Voice Agents"]
 cover:
   image: "/images/voice-pipeline-anatomy-banner.png"
+  animated: "/images/voice-pipeline-anatomy-banner.svg"
   alt: "A line passing through three small circles on a pastel teal background"
   caption: "A voice pipeline: one signal, passing through stages"
 description: "The stages of an agentic voice pipeline, what each one is for, where the latency goes, and when to skip the pipeline entirely."

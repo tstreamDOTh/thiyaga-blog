@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice" class="anim-cover">
+<style>
+  .cpipe * { transform-box: fill-box; transform-origin: center; }
+  @media (prefers-reduced-motion: reduce) { .cpipe * { animation: none !important; } }
+  :is(.post-entry,.home-tile,.entry-cover):hover .cpipe .pkt { animation: cpipe-travel 0.8s ease-in-out 1; }
+  @keyframes cpipe-travel { 0% { offset-distance: 0%; opacity: 1; } 90% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+</style>
+<g class="cpipe">
+<rect width="1200" height="630" fill="#d0e9e7"/>
+<line x1="280" y1="315" x2="920" y2="315" stroke="#3a3a3a" stroke-width="8"/>
+<circle cx="400" cy="315" r="40" fill="#d0e9e7" stroke="#3a3a3a" stroke-width="8"/>
+<circle cx="600" cy="315" r="40" fill="#d0e9e7" stroke="#3a3a3a" stroke-width="8"/>
+<circle cx="800" cy="315" r="40" fill="#d0e9e7" stroke="#3a3a3a" stroke-width="8"/>
+<circle class="pkt" r="11" fill="#3a3a3a" style="offset-path: path('M 280 315 L 920 315'); offset-distance: 100%; opacity: 0"/>
+</g>
+</svg>

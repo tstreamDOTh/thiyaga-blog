@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" class="anim-cover">
+<style>
+  .teng * { transform-box: fill-box; transform-origin: center; }
+  @media (prefers-reduced-motion: reduce) { .teng * { animation: none !important; } }
+  :is(.post-entry,.home-tile,.entry-cover):hover .teng .ring { animation: teng-pop 0.5s ease-out 1; }
+  @keyframes teng-pop { 0% { transform: scale(1); } 45% { transform: scale(1.3); } 100% { transform: scale(1); } }
+</style>
+<g class="teng">
+<rect width="1200" height="400" fill="#faeecd"/>
+<rect x="411" y="170" width="60" height="60" rx="8" fill="#3a3a3a"/>
+<rect x="517" y="170" width="60" height="60" rx="8" fill="#3a3a3a"/>
+<rect x="623" y="170" width="60" height="60" rx="8" fill="#3a3a3a"/>
+<circle class="ring" cx="759" cy="200" r="26" fill="none" stroke="#3a3a3a" stroke-width="9"/>
+</g>
+</svg>

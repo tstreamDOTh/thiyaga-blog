@@ -6,7 +6,7 @@ draft: false
 aliases:
   - /posts/livekit-voice-agents/
 tags: ["AI", "Voice AI", "Reliability", "Engineering", "Agentic AI", "LiveKit"]
-categories: ["AI Engineering"]
+categories: ["Voice Agents"]
 coauthors:
   - name: Kushagra Sahni
     url: https://www.linkedin.com/in/kushagra-sahni-171758201/
@@ -18,8 +18,9 @@ coauthors:
     url: https://www.linkedin.com/in/dibyashakti-moharana/
 cover:
   image: "/images/livekit-principles-banner.png"
-  alt: "A voice waveform of bars where one bar is hollow - the wave keeps going"
-  caption: "Reliability for voice agents: when one piece fails, the conversation keeps flowing"
+  animated: "/images/livekit-principles-banner.svg"
+  alt: "A chain of five connected dots; the middle one is hollow and an arc routes around it"
+  caption: "Reliability for voice agents: when one piece fails, the call routes around it and keeps going"
 description: "Ten hard-earned principles for keeping voice agents reliable in production, from seven months of incidents."
 showToc: false
 TocOpen: false

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" class="anim-cover">
+<style>
+  .tvoice * { transform-box: fill-box; transform-origin: center; }
+  @media (prefers-reduced-motion: reduce) { .tvoice * { animation: none !important; } }
+  :is(.post-entry,.home-tile,.entry-cover):hover .tvoice .core { animation: tvoice-core 0.7s ease-in-out 1; }
+  @keyframes tvoice-core { 0%,100% { transform: scale(1); } 40% { transform: scale(1.12); } }
+  :is(.post-entry,.home-tile,.entry-cover):hover .tvoice .halo { animation: tvoice-halo 0.7s ease-in-out 1; }
+  @keyframes tvoice-halo { 0%,100% { transform: scale(1); } 40% { transform: scale(1.22); } }
+</style>
+<g class="tvoice">
+<rect width="1200" height="400" fill="#d6e6f4"/>
+<circle class="halo" cx="600" cy="200" r="118" fill="#3a3a3a" opacity="0.08" style="animation-delay:0.12s"/>
+<circle class="halo" cx="588" cy="206" r="96" fill="#3a3a3a" opacity="0.14" style="animation-delay:0.06s"/>
+<circle class="halo" cx="610" cy="194" r="80" fill="#3a3a3a" opacity="0.2"/>
+<circle class="core" cx="600" cy="200" r="58" fill="#3a3a3a"/>
+</g>
+</svg>

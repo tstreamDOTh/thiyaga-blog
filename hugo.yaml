@@ -81,6 +81,17 @@ params:
     Title: "Field notes: agentic AI at scale"
     Content: "I’m Thiyagaraj, Director of Engineering on the Agentic Platform team at Eightfold AI. This is where I write down what production teaches us: voice agents that scaled to a million interactions, and the architecture decisions behind them."
 
+  # Category tiles shown on the home page, under the intro
+  homeTiles:
+    - category: "Voice Agents"
+      name: "Voice Agents"
+      image: "/images/tile-voice-agents.svg"
+      description: "Architecture, reliability and evals for real-time voice agents in production."
+    - category: "AI Engineering"
+      name: "AI Engineering"
+      image: "/images/tile-ai-engineering.svg"
+      description: "Costs, team velocity, agentic plumbing and the papers behind it all."
+
   socialIcons:
     - name: github
       url: "https://github.com/tstreamDOTh"

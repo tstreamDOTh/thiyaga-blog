@@ -108,3 +108,83 @@
         height: 120px;
     }
 }
+
+/* The theme hides covers on category and tag list entries; show them like the home list */
+.list .tag-entry .entry-cover {
+    display: block;
+}
+
+/* Home page category tiles */
+.home-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
+    margin: 0 0 calc(var(--gap) * 2) 0;
+}
+
+.home-tile {
+    display: flex;
+    flex-direction: column;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--primary);
+    text-decoration: none;
+    overflow: hidden;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.home-tile:hover {
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* Inline animated covers (SVG). The parent card's :hover triggers the animation defined inside each SVG. */
+.anim-cover-wrap { display: block; line-height: 0; }
+.anim-cover-wrap svg { display: block; width: 100%; height: auto; }
+
+/* Single post: same framing as the theme's cover image */
+.post-single .entry-cover .anim-cover-wrap svg { border-radius: var(--radius); }
+
+/* List thumbnails: same 140x90 crop as the img version (SVG uses preserveAspectRatio slice) */
+.list .entry-cover .anim-cover-wrap svg { width: 140px; height: 90px; border-radius: var(--radius); }
+
+/* Home tiles: a short band across the top of the card */
+.home-tile-thumb svg { width: 100%; height: 120px; }
+
+.home-tile-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 20px 18px;
+}
+
+.home-tile-kicker {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.home-tile-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--secondary);
+}
+
+.home-tile-latest {
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--primary);
+    opacity: 0.85;
+}
+
+.home-tile-count {
+    font-size: 13px;
+    color: var(--secondary);
+}
+
+@media (max-width: 600px) {
+    .home-tiles {
+        grid-template-columns: 1fr;
+    }
+}

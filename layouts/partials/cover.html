@@ -1,0 +1,19 @@
+{{- /* Cover override: when a post sets cover.animated (an SVG), show that on the site. cover.image (PNG)
+       is untouched and still feeds og:image, twitter:image and schema.org, which social previews need.
+       Posts without cover.animated fall through to the theme's own partial. */ -}}
+{{- with .cxt }}
+{{- if (and .Params.cover.animated (not $.isHidden)) }}
+<figure class="entry-cover">
+    {{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}
+    {{- $svg := readFile (printf "static%s" .Params.cover.animated) }}
+    <span class="anim-cover-wrap" role="img" aria-label="{{ $alt }}">{{ $svg | safeHTML }}</span>
+    {{- if $.IsSingle }}
+        {{ with .Params.cover.caption -}}
+            <figcaption>{{ . | markdownify }}</figcaption>
+        {{- end }}
+    {{- end }}
+</figure>
+{{- else }}
+{{- partial "cover_theme.html" (dict "cxt" . "IsSingle" $.IsSingle "isHidden" $.isHidden) }}
+{{- end }}
+{{- end -}}

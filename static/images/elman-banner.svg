@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice" class="anim-cover">
+<style>
+  .celman * { transform-box: fill-box; transform-origin: center; }
+  @media (prefers-reduced-motion: reduce) { .celman * { animation: none !important; } }
+  :is(.post-entry,.home-tile,.entry-cover):hover .celman .arc { animation: celman-draw 0.8s ease-out 1; }
+  @keyframes celman-draw { 0% { stroke-dashoffset: 520; } 100% { stroke-dashoffset: 0; } }
+</style>
+<g class="celman">
+<rect width="1200" height="630" fill="#e7e1f4"/>
+<circle cx="355" cy="372" r="30" fill="#3a3a3a"/>
+<circle cx="478" cy="372" r="30" fill="#3a3a3a"/>
+<circle cx="601" cy="372" r="30" fill="#3a3a3a"/>
+<circle cx="724" cy="372" r="30" fill="#3a3a3a"/>
+<circle cx="845" cy="372" r="24" fill="none" stroke="#3a3a3a" stroke-width="10"/>
+<path class="arc" d="M 845 325 C 845 210 478 210 478 325" fill="none" stroke="#3a3a3a" stroke-width="8" stroke-linecap="round" stroke-dasharray="520" stroke-dashoffset="0"/>
+</g>
+</svg>

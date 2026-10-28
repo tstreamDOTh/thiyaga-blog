@@ -3,10 +3,11 @@ title: "No Answer Key: How to Measure Voice Agent Quality"
 date: 2026-10-28T00:30:00+05:30
 draft: false
 tags: ["AI", "Evals", "Agentic AI", "LLM", "Voice AI", "Engineering"]
-categories: ["AI Engineering"]
+categories: ["Voice Agents"]
 description: "A conversation has no single right answer. What breaks when you try to measure it anyway, what to put in place instead, how far an LLM judge gets you, and where humans still sit in the loop."
 cover:
   image: "/images/conversation-quality-metrics-banner.png"
+  animated: "/images/conversation-quality-metrics-banner.svg"
   alt: "A wavy line between two faint threshold lines, breaking out once at a hollow circle"
   caption: "A conversation never runs straight. Measure where it leaves the band."
 showToc: true

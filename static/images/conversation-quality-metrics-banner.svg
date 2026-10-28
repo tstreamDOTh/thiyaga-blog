@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice" class="anim-cover">
+<style>
+  .cconv * { transform-box: fill-box; transform-origin: center; }
+  @media (prefers-reduced-motion: reduce) { .cconv * { animation: none !important; } }
+  :is(.post-entry,.home-tile,.entry-cover):hover .cconv .conv { animation: cconv-speak 0.8s ease-out 1; }
+  @keyframes cconv-speak { 0% { stroke-dashoffset: 760; } 100% { stroke-dashoffset: 0; } }
+  :is(.post-entry,.home-tile,.entry-cover):hover .cconv .breach { animation: cconv-pop 0.8s ease-out 1; }
+  @keyframes cconv-pop { 0%,55% { transform: scale(0); } 75% { transform: scale(1.3); } 100% { transform: scale(1); } }
+</style>
+<g class="cconv">
+<rect width="1200" height="630" fill="#f7dee0"/>
+<line x1="300" y1="245" x2="900" y2="245" stroke="#9a8a8c" stroke-width="6"/>
+<line x1="300" y1="385" x2="900" y2="385" stroke="#9a8a8c" stroke-width="6"/>
+<polyline class="conv" points="300,315 304,318 308,322 312,325 316,329 320,332 324,335 328,338 332,341 336,343 340,345 344,347 348,349 352,350 356,352 360,352 364,353 368,353 372,353 376,352 380,352 384,351 388,349 392,347 396,345 400,343 404,341 408,338 412,335 416,332 420,329 424,326 428,322 432,319 436,315 440,312 444,308 448,305 452,302 456,298 460,295 464,292 468,290 472,287 476,285 480,283 484,281 488,280 492,279 496,278 500,277 504,277 508,277 512,278 516,278 520,279 524,281 528,282 532,284 536,287 540,289 544,292 548,295 552,298 556,301 560,304 564,307 568,311 572,314 576,318 580,321 584,325 588,328 592,331 596,334 600,337 604,340 608,343 612,345 616,347 620,349 624,350 628,351 632,351 636,351 640,351 644,349 648,346 652,341 656,335 660,328 664,318 668,307 672,296 676,284 680,273 684,264 688,258 692,255 696,255 700,258 704,262 708,268 712,274 716,279 720,284 724,287 728,289 732,289 736,289 740,288 744,286 748,285 752,283 756,281 760,280 764,279 768,278 772,277 776,277 780,277 784,277 788,278 792,279 796,280 800,282 804,284 808,286 812,289 816,291 820,294 824,297 828,300 832,303 836,307 840,310 844,314 848,317 852,321 856,324 860,327 864,331 868,334 872,337 876,340 880,342 884,344 888,347 892,348 896,350 900,351" fill="none" stroke="#3a3a3a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="760" stroke-dashoffset="0"/>
+<circle cx="300" cy="315" r="16" fill="#3a3a3a"/>
+<circle cx="900" cy="351" r="16" fill="#3a3a3a"/>
+<circle class="breach" cx="690" cy="256" r="24" fill="#f7dee0" stroke="#3a3a3a" stroke-width="10"/>
+</g>
+</svg>

@@ -6,6 +6,7 @@ tags: ["AI", "Software Development", "Agentic AI", "Engineering", "Machine Learn
 categories: ["AI Engineering"]
 cover:
   image: "/images/9010-banner.png"
+  animated: "/images/9010-banner.svg"
   alt: "Agentic AI Plumbing"
   caption: "The 90/10 Rule: Building Agentic AI Systems"
 description: "90% of building agentic AI is software engineering and only 10% is the model - hard-learned lessons from building AI interview systems at Eightfold."

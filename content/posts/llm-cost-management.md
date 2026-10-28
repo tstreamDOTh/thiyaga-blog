@@ -6,6 +6,7 @@ tags: ["AI", "LLM", "Cost Management", "Engineering", "Platform", "AI Engineerin
 categories: ["AI Engineering"]
 cover:
   image: "/images/llm-cost-management-banner.png"
+  animated: "/images/llm-cost-management-banner.svg"
   alt: "A scatter of small filled dots converging through a funnel into one solid square"
   caption: "Dozens of teams, billions of tokens, one sane bill"
 description: "Thousands of AI interviews a day, dozens of teams calling LLM APIs, one sane bill. Here's the system."

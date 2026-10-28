@@ -1,0 +1,39 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>{{ .Title | markdownify }}</h1>
+    </header>
+    <div class="entry-content">
+        {{ .Content | markdownify }}
+    </div>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </footer>
+</article>
+{{- end -}}
+
+{{- /* Category tiles: one card per entry in site.Params.homeTiles, linking to that category's list page. */ -}}
+{{- with site.Params.homeTiles }}
+<div class="home-tiles">
+  {{- range . }}
+    {{- $tile := . }}
+    {{- $term := site.GetPage (printf "/categories/%s" (urlize $tile.category)) }}
+    {{- with $term }}
+    {{- $latest := index .Pages.ByDate.Reverse 0 }}
+    <a class="home-tile" href="{{ .RelPermalink }}">
+      {{- with $tile.image }}
+      <span class="home-tile-thumb anim-cover-wrap" aria-hidden="true">{{ readFile (printf "static%s" .) | safeHTML }}</span>
+      {{- end }}
+      <span class="home-tile-body">
+        <span class="home-tile-kicker">{{ $tile.name | default .Title }}</span>
+        <span class="home-tile-desc">{{ $tile.description }}</span>
+        {{- with $latest }}
+        <span class="home-tile-latest">Latest: {{ .Title }}</span>
+        {{- end }}
+        <span class="home-tile-count">{{ len .Pages }} post{{ if ne (len .Pages) 1 }}s{{ end }} →</span>
+      </span>
+    </a>
+    {{- end }}
+  {{- end }}
+</div>
+{{- end -}}
